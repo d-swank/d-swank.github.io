@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dakota Swank's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-------------------- Navigation  -------------------->
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="side-bar">
+                    <div class="brand">
+                        <img src="images/logos/DSLogo.png" class="logo-image">
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
+                        <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#education">Education</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#work-experience">Experience</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="#projects">Projects</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
+            </div>
+        </div>
+
+        <!-------------------- Introduction  -------------------->
+        <div class="content-wrapper">
+            <div class="intro">
+                <small class="text-color">Hi, my name is</small>
+                <h1 class="custom-line-height"><span class="name">Dakota Swank.</span></h1>
+                <h1 class="custom-line-height"><span class="welcome">Welcome to my portfolio.</span></h1>
+                <small class="intro-paragraph custom-line-height">I am a San Diego-based software engineer with a 
+                    passion for creating innovative and user-friendly solutions. With a strong 
+                    foundation in programming languages such as HTML, CSS, C++ and Java, I 
+                    strive to develop efficient and high-quality applications that cater to the 
+                    diverse needs of clients across various industries.</small><br><br><br>
+                
+                <a href="contact.html"><button class="contact-button">Get In Touch</button></a>
+            </div>
+        </div>
+
+        <!-------------------- Academics  -------------------->
+        <div id="education" class="port-header"><h2>Education</h2></div>
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper academics">
+
+                <div class="portfolio-item-wrapper" style="cursor:default">
+                    <div class="portfolio-img-background academics-bg" style="background-image:url(images/miracosta.jpg)"></div>
+                    <div class="portfolio-item-info">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/miracostalogo.png">
+                        </div>
+                        <div class="portfolio-item-text">
+                            <p>2019 - 2021</p>
+                            <p>Associate Degree for Transfer: Computer Science</p>
+                            <p>Honors: GPA: 3.76 | Phi Theta Kappa Honors Society | President’s Permanent Honor Roll</p>
+                        </div>
+                    </div>
+                    <div class="subtitle-education">
+                        MiraCosta College
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper" style="cursor:default">
+                    <div class="portfolio-img-background academics-bg" style="background-image:url(images/CSUSM.jpg)"></div>
+                    
+                    <div class="portfolio-item-info">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/csusmlogo.png">
+                        </div>
+                        <div class="portfolio-item-text">
+                            <p>2022 - 2023</p>
+                            <p>Bacholer of Science: Computer Science</p>
+                            <p>Honors: Most recent GPA: 3.66 | Golden Key International Honor Society</p>
+                        </div>
+                    </div>
+                    <div class="subtitle-education">
+                        CSU San Marcos
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------- Work Experience  -------------------->
+        <div id="work-experience" class="port-header"><h2>Experience</h2></div>
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper work" style="padding-bottom: 240px;">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Boeing.jfif)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Software Application Tester
+                        </div>
+                        <p>Writes, executes and reports test cases performed for web-based applications and creates various 
+                            regression testing scenarios to evaluate effectiveness, quality, and scalability performance 
+                            of web-based tools used across the customer enterprise and across the broader Intelligence 
+                            Community (IC).</p>
+                        
+                        <p>PLs used: JavaScript, SQL </p>
+                        <p>Frameworks: Angular</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------- Projects  -------------------->
+        <div id="projects" class="port-header"><h2>Projects</h2></div>
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper" style="padding-bottom: 240px;">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/MusicLightDisplay.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Musical Light Display
+                        </div>
+
+                        <p>An embedded system utilizing a Nucleo board that uses push buttons to select 
+                            a Christmas song. When a song plays, three LEDs flash to the notes of the song, displays 
+                            the name of the song on an LCD screen and when the song is playing a potentiometer is used 
+                            for volume control.</p>
+
+                        <p>PL used: C++</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Translator.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Japanese Translator
+                        </div>
+
+                        <p>Developed a translator that utilizes a deterministic finite automaton (DFA) to adhere to a 
+                            specific set of rules. Using provided files containing various sentences, the program checks 
+                            for syntactic and semantic accuracy. If the sentences pass this check, the program accurately
+                             parses and translates the story from Japanese to English. </p>
+
+                        <p>PL used: C++</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/LexGUI.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Lexical Analyzer GUI
+                        </div>
+
+                        <p>Created a GUI application using Tkinter that implemented a lexical analyzer by taking the input 
+                            of source code, reading it line by line, getting the lexical analyzed result, and then parsing 
+                            it into a parse tree. </p>
+                        
+                        <p>PL used: Python</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/DataStuctures.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Data Structures and Algorithms
+                        </div>
+
+                        <p>Assignments from CS 311 Data Structures & Algorithms class at CSUSM.</p>
+                        <p>PL used: C++</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/OutbreakVR.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Outbreak VR
+                        </div>
+
+                        <p>A virtual reality horror game set in space. The player takes on the role of a character 
+                            navigating through a dangerous space environment, where they can encounter 
+                            various obstacles and enemies that can cause damage to their character. </p>
+                        <p>PL used: C#</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/FithubApp.png)"></div>
+
+                    <div class="portfolio-item-info">
+                        <!-- <div class="logo-wrapper">
+                            <img src="images/logos/quip.png">
+                        </div> -->
+
+                        <div class="subtitle">
+                            Fithub
+                        </div>
+
+                        <p>a fitness application that allows users to browse exercises, create customized workout plans, 
+                            track their progress, and communicate with other users. The application utilizes a client-server 
+                            architecture, with a User Module that provides a user-friendly interface for accessing the FitHub 
+                            server's data tables.</p>
+                        <p>PLs used: HTML, CSS, JavaScript, SQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+            portfolioItem.childNodes[5].classList.add('fade-out');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+            portfolioItem.childNodes[5].classList.remove('fade-out');
+        })
+    })
+</script>
+</html>
