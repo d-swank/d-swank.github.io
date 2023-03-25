@@ -383,6 +383,51 @@ body {
     body {
       font-size: 14px;
     }
+  
+    .container {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .nav-wrapper {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .left-side {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .right-side {
+      font-size: 0.7em;
+    }
+  
+    .intro {
+      margin-left: 5%;
+    }
+  
+    .portfolio-items-wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .academics {
+      grid-template-columns: 1fr;
+    }
+  
+    .work {
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .two-column-wrapper {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .container-contact {
+      padding: 20px;
+    }
   }
 
 /* About page Styles */
