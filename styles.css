@@ -494,7 +494,7 @@ input[type=submit]:hover {
     }
   
     .intro {
-      margin-left: 10%;
+      margin-left: 0;
       font-size: 0.9em;
     }
   
@@ -508,6 +508,7 @@ input[type=submit]:hover {
   
     .portfolio-items-wrapper {
       grid-template-columns: 1fr;
+      grid-gap: 20px;
     }
   
     .academics {
@@ -528,4 +529,9 @@ input[type=submit]:hover {
     .container-contact {
       padding: 10px;
     }
-}
+  
+    /* forces elements to fit the container */
+    * {
+      box-sizing: border-box;
+    }
+  }
