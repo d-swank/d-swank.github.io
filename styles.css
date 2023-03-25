@@ -470,10 +470,7 @@ input[type=submit]:hover {
 
 /* Styles for smaller screens (e.g., smartphones) */
 @media (max-width: 767px) {
-    body {
-      font-size: 12px;
-    }
-  
+    
     .container {
       margin-left: 10px;
       margin-right: 10px;
@@ -485,26 +482,26 @@ input[type=submit]:hover {
     }
   
     .left-side {
-      font-size: 1rem;
+      font-size: 0.5rem;
       margin-bottom: 10px;
     }
   
     .right-side {
-      font-size: 0.6em;
+      font-size: 0.3em;
     }
   
     .intro {
-      margin-left: 0;
-      font-size: 0.9em;
+      margin-left: 10px;
+      font-size: 0.6em;
     }
   
-    .name {
+    /* .name {
       font-size: 45px;
     }
   
     .welcome {
       font-size: 45px;
-    }
+    } */
   
     .portfolio-items-wrapper {
       grid-template-columns: 1fr;
@@ -513,6 +510,7 @@ input[type=submit]:hover {
   
     .academics {
       grid-template-columns: 1fr;
+      grid-gap: 20px;
     }
   
     .work {
