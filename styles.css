@@ -378,58 +378,6 @@ body {
     color: transparent;
 }
 
-/* Styles for smaller screens (e.g., smartphones) */
-@media (max-width: 767px) {
-    body {
-      font-size: 14px;
-    }
-  
-    .container {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-  
-    .nav-wrapper {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .left-side {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-  
-    .right-side {
-      font-size: 0.7em;
-    }
-  
-    .intro {
-      margin-left: 5%;
-    }
-  
-    .portfolio-items-wrapper {
-      grid-template-columns: 1fr;
-    }
-  
-    .academics {
-      grid-template-columns: 1fr;
-    }
-  
-    .work {
-      width: 100%;
-      padding-left: 0;
-    }
-  
-    .two-column-wrapper {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-  
-    .container-contact {
-      padding: 20px;
-    }
-  }
-
 /* About page Styles */
 .two-column-wrapper {
     display: grid;
@@ -518,4 +466,66 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white;
     color: black;
+}
+
+/* Styles for smaller screens (e.g., smartphones) */
+@media (max-width: 767px) {
+    body {
+      font-size: 12px;
+    }
+  
+    .container {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .nav-wrapper {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .left-side {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  
+    .right-side {
+      font-size: 0.6em;
+    }
+  
+    .intro {
+      margin-left: 3%;
+      font-size: 0.9em;
+    }
+  
+    .name {
+      font-size: 45px;
+    }
+  
+    .welcome {
+      font-size: 45px;
+    }
+  
+    .portfolio-items-wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .academics {
+      grid-template-columns: 1fr;
+    }
+  
+    .work {
+      width: 100%;
+      padding-left: 0;
+      font-size: 0.9em;
+    }
+  
+    .two-column-wrapper {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .container-contact {
+      padding: 10px;
+    }
 }
