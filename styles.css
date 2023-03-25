@@ -378,21 +378,12 @@ body {
     color: transparent;
 }
 
-@media screen and (max-width: 1500px) {
-    .intro-wrapper {
-        padding-left: 24px;
-        padding-bottom: 50px;
-        font-size: 1.2em;
+/* Styles for smaller screens (e.g., smartphones) */
+@media (max-width: 767px) {
+    body {
+      font-size: 14px;
     }
-}
-
-@media screen and (max-width: 800px) {
-    .nav-right {
-        text-align: right;
-        margin-right: 0;
-        font-size: 1.2em;
-    }
-}
+  }
 
 /* About page Styles */
 .two-column-wrapper {
