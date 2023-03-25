@@ -469,7 +469,7 @@ input[type=submit]:hover {
 }
 
 /* Styles for smaller screens (e.g., smartphones) */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     
     .container {
       margin-left: 10px;
@@ -495,13 +495,13 @@ input[type=submit]:hover {
       font-size: 0.6em;
     }
   
-    /* .name {
+    .name {
       font-size: 45px;
     }
   
     .welcome {
       font-size: 45px;
-    } */
+    }
   
     .portfolio-items-wrapper {
       grid-template-columns: 1fr;
@@ -529,7 +529,63 @@ input[type=submit]:hover {
     }
   
     /* forces elements to fit the container */
-    * {
+    /** {
       box-sizing: border-box;
     }
-  }
+  } */
+
+  @media screen and (max-width: 1500px) {
+    .intro-wrapper {
+        padding-left: 24px;
+        padding-bottom: 50px;
+        font-size: 1.2em;
+    }
+
+    .portfolio-items-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-item-wrapper {
+        width: 95%;
+    }
+
+    #workSpacer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-right {
+        text-align: right;
+        margin-right: 0;
+        font-size: 1.2em;
+    }
+
+    .nav-wrapper {
+        padding: 24px;
+    }
+    
+    .intro-wrapper {
+        flex-direction: column;
+        padding: 0;
+        font-size: 1.2em;
+    }
+
+    .portfolio-items-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item-wrapper {
+        width: 95%;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .nav-wrapper {
+        position: relative;
+    }
+
+    .content-wrapper, .about-wrapper {
+        padding-top: 8px;
+    }
+}
