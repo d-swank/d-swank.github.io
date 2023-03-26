@@ -17,31 +17,44 @@
 </script>
 <body>
     <div class="container">
-        <div class="nav-wrapper">
-            <div class="left-side">
-                <div class="side-bar">
+         <!-------------------- Navigation  -------------------->
+        <div class="left-side-bar">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
+                <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+            </div>
+        </div>
+
+        <div class="right-side-bar">
+            <div class="email-vertical">
+                <a href="mailto:contact@swanksoftware.com">contact.swanksoftware.com</a>
+            </div>
+        </div>
+        
+        <div class ="navbar-wrapper">
+            <nav class="nav-wrapper">
+                <div class="left-side">
                     <div class="brand">
-                        <img src="images/logos/DSLogo.png" class="logo-image">
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
-                        <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+                        <a href="index.html">
+                            <img src="images/logos/DSLogo.png" class="logo-image">
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="right-side">
-                <div class="nav-link-wrapper">
-                    <a href="index.html">Home</a>
+                <button class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="right-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="about.html">About</a>
+                    </div>
+
+                    <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
                 </div>
-
-                <div class="nav-link-wrapper active-nav-link">
-                    <a href="about.html">About</a>
-                </div>
-
-                <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
-            </div>
+            </nav>
         </div>
 
         <div class="content-wrapper">

@@ -7,9 +7,9 @@
     <meta property="og:image" content="images/metalogo.png" />
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Dakota Swank's Portfolio</title>
+    <title>Dakota Swank</title>
     <link rel="icon" href="/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <style>
@@ -31,74 +31,85 @@
     <div class="container">
 
         <!-------------------- Navigation  -------------------->
-        <div class="nav-wrapper">
-            <div class="left-side">
-                <div class="side-bar">
+        <div class="left-side-bar">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
+                <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+            </div>
+        </div>
+
+        <div class="right-side-bar">
+            <div class="email-vertical">
+                <a href="mailto:contact@swanksoftware.com">contact.swanksoftware.com</a>
+            </div>
+        </div>
+        
+        <div class ="navbar-wrapper">
+            <nav class="nav-wrapper">
+                <div class="left-side">
                     <div class="brand">
-                        <img src="images/logos/DSLogo.png" class="logo-image">
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
-                        <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+                        <a href="index.html">
+                            <img src="images/logos/DSLogo.png" class="logo-image">
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="right-side">
-                <div class="nav-link-wrapper active-nav-link">
-                    <a href="index.html">Home</a>
+                <button class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="right-side">
+
+                    <div class="nav-link-wrapper">
+                        <a href="#education" class="nav-link" data-number="1"><span class="nav-link-text">Education</span></a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="#work-experience" class="nav-link" data-number="2"><span class="nav-link-text">Experience</span></a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="#projects" class="nav-link" data-number="3"><span class="nav-link-text">Projects</span></a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="about.html" class="nav-link" data-number="4"><span class="nav-link-text">About</span></a>
+                    </div>
+
+                    <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
                 </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#education">Education</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#work-experience">Experience</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#projects">Projects</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="about.html">About</a>
-                </div>
-
-                <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
-            </div>
+            </nav>
         </div>
 
         <!-------------------- Introduction  -------------------->
         <div class="content-wrapper">
             <div class="intro">
-                <small class="text-color">Hi, my name is</small>
-                <h1 class="custom-line-height"><span class="name">Dakota Swank.</span></h1>
-                <h1 class="custom-line-height"><span class="welcome">Welcome to my website portfolio.</span></h1>
-                <small class="intro-paragraph custom-line-height">I am a San Diego-based software engineer with a 
+                <h1 class="text-color">Hi, my name is</h1>
+                <h2 class="custom-line-height"><span class="name">Dakota Swank.</span></h2>
+                <h3 class="custom-line-height"><span class="welcome">Welcome to my portfolio.</span></h3>
+                <p class="intro-paragraph custom-line-height">I am a San Diego-based software engineer with a 
                     passion for creating innovative and user-friendly solutions. With a strong 
                     foundation in programming languages such as HTML, CSS, C++ and Java, I 
                     strive to develop efficient and high-quality applications that cater to the 
-                    diverse needs of clients across various industries.</small><br><br><br>
+                    diverse needs of clients across various industries.</p>
                 
                 <a href="contact.html"><button class="contact-button">Get In Touch</button></a>
             </div>
         </div>
 
         <!-------------------- Academics  -------------------->
-        <div id="education" class="port-header">
-            <h2><span class="tag">&lt;Education&gt;</span></h2>
-        </div>
+        <div id="education" class="port-header"> Education</div>
         <div class="content-wrapper">
             <div class="portfolio-items-wrapper academics">
 
                 <div class="portfolio-item-wrapper" style="cursor:default">
                     <div class="portfolio-img-background academics-bg" style="background-image:url(images/miracosta-grayscale.jpg)"></div>
                     <div class="portfolio-item-info">
-                        <div class="logo-wrapper">
+                        <!-- <div class="logo-wrapper">
                             <img src="images/logos/miracostalogo-grayscale.png">
-                        </div>
+                        </div> -->
                         <div class="portfolio-item-text">
                             <p>2019 - 2021</p>
                             <p>Associate Degree for Transfer: Computer Science</p>
@@ -110,9 +121,9 @@
                     <div class="portfolio-img-background academics-bg" style="background-image:url(images/CSUSM-grayscale.jpg)"></div>
                     
                     <div class="portfolio-item-info">
-                        <div class="logo-wrapper">
+                        <!-- <div class="logo-wrapper">
                             <img src="images/logos/csusmlogo-grayscale.png">
-                        </div>
+                        </div> -->
                         <div class="portfolio-item-text">
                             <p>2022 - 2023</p>
                             <p>Bacholer of Science: Computer Science</p>
@@ -122,24 +133,19 @@
                 </div>
             </div>
         </div>
-        <div class="port-footer">
-            <h2><span class="tag">&lt;/Education&gt;</span></h2>
-        </div>
 
         <!-------------------- Work Experience  -------------------->
+        <div id="work-experience" class="port-header">Work</div>
         <div class="content-wrapper">
-            <div id="work-experience" class="port-header">
-                <h2><span class="tag">&lt;Experience&gt;</span></h2>
-            </div>
             <div class="portfolio-items-wrapper work" style="padding-bottom: 240px;">
 
                 <div class="portfolio-item-wrapper">
                     <div class="portfolio-img-background" style="background-image:url(images/Boeing787Plant.jpg)"></div>
 
                     <div class="portfolio-item-info">
-                        <div class="logo-wrapper">
+                        <!-- <div class="logo-wrapper">
                             <img src="images/logos/boeinglogo.png">
-                        </div>
+                        </div> -->
 
                         <div class="subtitle">
                             Software Application Tester
@@ -154,25 +160,17 @@
                     </div>
                 </div>
             </div>
-            <div class="port-footer">
-                <h2><span class="tag">&lt;/Experience&gt;</span></h2>
-            </div>
         </div>
 
         <!-------------------- Projects  -------------------->
-        <div id="projects" class="port-header">
-            <h2><span class="tag">&lt;Projects&gt;</span></h2>
-        </div>
+        <div id="projects" class="port-header">Projects</div>
         <div class="content-wrapper">
-            <div class="portfolio-items-wrapper" style="padding-bottom: 240px;">
+            <div class="portfolio-items-wrapper projects" style="padding-bottom: 240px;">
 
                 <div class="portfolio-item-wrapper">
                     <div class="portfolio-img-background" style="background-image:url(images/MusicLightDisplay.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
 
                         <div class="subtitle">
                             Musical Light Display
@@ -191,10 +189,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/Translator.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
-
                         <div class="subtitle">
                             Japanese Translator
                         </div>
@@ -212,10 +206,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/LexGUI.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
-
                         <div class="subtitle">
                             Lexical Analyzer GUI
                         </div>
@@ -232,10 +222,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/DataStuctures.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
-
                         <div class="subtitle">
                             Data Structures and Algorithms
                         </div>
@@ -249,10 +235,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/OutbreakVR.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
-
                         <div class="subtitle">
                             Outbreak VR
                         </div>
@@ -265,13 +247,9 @@
                 </div>
 
                 <div class="portfolio-item-wrapper">
-                    <div class="portfolio-img-background" style="background-image:url(images/FithubApp.png)"></div>
+                    <div class="portfolio-background-img" style="background-image:url(images/FithubApp.png)"></div>
 
                     <div class="portfolio-item-info">
-                        <!-- <div class="logo-wrapper">
-                            <img src="images/logos/quip.png">
-                        </div> -->
-
                         <div class="subtitle">
                             Fithub
                         </div>
@@ -285,12 +263,9 @@
                 </div>
             </div>
         </div>
-        <div class="port-footer">
-            <h2><span class="tag">&lt;/Projects&gt;</span></h2>
-        </div>
     </div>
 </body>
-<script>
+<!-- <script>
     const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
 
     portfolioItems.forEach(portfolioItem => {
@@ -304,5 +279,6 @@
             portfolioItem.childNodes[5].classList.remove('fade-out');
         })
     })
-</script>
+</script> -->
+<script src="script.js"></script>
 </html>
