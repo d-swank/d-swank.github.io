@@ -125,6 +125,10 @@ body {
     animation: fadeInAnimation 0.5s ease-in-out;
 }
 
+/* .nav-link-text.active {
+    color: rgb(0, 217, 255);
+  } */
+
 .right-side {
     display: flex;
     font-size: 0.8em;
@@ -360,7 +364,6 @@ body {
 .name {
     display: inline;
     font-weight: bold;
-    /* font-size: 55px; */
     font-size: 3em;
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -368,7 +371,6 @@ body {
 .welcome {
     display: inline;
     font-weight: bold;
-    /* font-size: 50px; */
     font-size: 3.5em;
     color: grey;
     font-family:Arial, Helvetica, sans-serif;
@@ -381,7 +383,6 @@ body {
 .intro-paragraph {
     max-width: 50%;
     margin-right: auto;
-    /* text-align: justify; */
     line-height: 1.4;
     color: grey;
     font-size: 1em;
@@ -399,8 +400,13 @@ body {
     color: white;
 } 
 
-/* Education */
+/* Academic Styles */
 
+
+/* Work Experience Styles */
+
+
+/* Project Styles */
 
 /* About page Styles */
 .two-column-wrapper {
@@ -427,6 +433,3 @@ body {
 .profile-content-wrapper p {
     color: gray;
 }
-
-/* Academic Styles */
-
