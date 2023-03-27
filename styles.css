@@ -59,12 +59,6 @@ body {
     transition: 2s;
 }
 
-.content-wrapper {
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Nav Bar Styles */
 .hide-navbar {
     transform: translateY(-100%);
@@ -105,7 +99,7 @@ body {
 
     content: attr(data-number) ". ";
     position: absolute;
-    left: -1.5em;
+    left: -2.0em;
     color: rgb(0, 217, 255);
 }
   
@@ -246,8 +240,8 @@ body {
     height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .nav-link-wrapper a {
@@ -270,11 +264,11 @@ body {
 .resume-button {
     color: rgb(0, 217, 255);
     font-family: monospace;
-    padding: 10px 15px;
+    padding: 10px 16px;
     background: transparent;
     border: 1px solid rgb(0, 217, 255);;
     border-radius: 5px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     outline: none;
     cursor: pointer;
     transition: 0.2s;
@@ -324,7 +318,62 @@ body {
     }
 }
 
-.contact-button {
+/******************** Main Styles ********************/
+
+/* Introduction Styles */
+.content-wrapper-intro {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    text-align: left; 
+    color: white;
+    margin-left: 10%;
+    animation: fadeInAnimation 2.5s ease-in-out;
+}
+
+.text-color-intro {
+    color: rgb(0, 217, 255);
+    font-size: 1.3em;
+    font-family:monospace;
+}
+
+.name-intro {
+    display: inline;
+    font-weight: bold;
+    font-size: 3em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.welcome-intro {
+    display: inline;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: grey;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.custom-line-height-intro {
+    line-height: 0.6;
+}
+
+.paragraph-intro {
+    max-width: 50%;
+    margin-right: auto;
+    line-height: 1.4;
+    color: grey;
+    font-size: 1em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.about-button-intro {
     color: rgb(0, 217, 255);;
     padding: 15px 30px;
     margin-top: 10%;
@@ -337,74 +386,115 @@ body {
     transition: 0.2s;
 }
 
-.contact-button:hover {
+.about-button-intro:hover {
     background-color: white;
     color: black;
 }
 
-/* Introduction Styles */
-.intro {
+/* Education Styles */
+.section-header-academics {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.section-header-academics h2 {
+    color: white;
+    margin-left: 10%;
+}
+
+.items-wrapper-academics {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    text-align: left; 
-    color: white;
-    margin-left: 10%;
-    animation: fadeInAnimation 2.5s ease-in-out;
-}
-
-.text-color {
-    color: rgb(0, 217, 255);
-    font-size: 1.3em;
-    font-family:monospace;
-}
-
-.name {
-    display: inline;
-    font-weight: bold;
-    font-size: 3em;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.welcome {
-    display: inline;
-    font-weight: bold;
-    font-size: 3.5em;
-    color: grey;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.custom-line-height {
-    line-height: 0.6;
-}
-
-.intro-paragraph {
-    max-width: 50%;
-    margin-right: auto;
-    line-height: 1.4;
-    color: grey;
-    font-size: 1em;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-/******************** Main Styles ********************/
-.port-header {
-    display: flex;
+    align-items: center;
+    margin-top: 30px;
     width: 100%;
-    margin-left: 10%;
-    /* justify-content: flex-start; */
-    animation: fadeInAnimation 1s ease-in-out;
-    text-align: center;
-    color: white;
-} 
+    max-width: 1200px;
+}
 
-/* Academic Styles */
+.item-wrapper-academics {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 30px;
+}
 
+.img-bkgrd-miracosta {
+    width: 550px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    margin-right: 65%;
+}
+
+.img-bkgrd-CSUSM {
+    width: 550px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    margin-left: 65%;
+    background-color: #555;
+}
+
+.img-bkgrd-miracosta, .img-bkgrd-CSUSM {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.item-wrapper-academics:hover .img-bkgrd-miracosta,
+.item-wrapper-academics:hover .img-bkgrd-CSUSM {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.item-info-academics-associates {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+    width: 550px;
+    margin-left: 100%;
+}
+
+.item-info-academics-bachelors {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+    width: 550px;
+    margin-right: 100%;
+}
+
+.text-box {
+    background-color: rgb(62, 62, 62); 
+    border-radius: 5px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+}
+
+.item-text-academics-miracosta {
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+.item-text-academics-CSUSM {
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
 
 /* Work Experience Styles */
-
 
 /* Project Styles */
 
@@ -433,3 +523,6 @@ body {
 .profile-content-wrapper p {
     color: gray;
 }
+
+/* Contact Styles */
+
