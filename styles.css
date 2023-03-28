@@ -264,8 +264,8 @@ body {
 }
 
 .resume-button:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 217, 255, 0.2);
+    color: rgb(0, 217, 255, 0.5);
     
 }
 
@@ -368,7 +368,7 @@ body {
     padding: 15px 30px;
     margin-top: 10%;
     background: transparent;
-    border: 1px solid rgb(0, 217, 255);
+    border: 1px solid rgb(0, 217, 255, 0.5);
     border-radius: 5px;
     font-size: 1em;
     outline: none;
@@ -377,8 +377,8 @@ body {
 }
 
 .about-button-intro:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 217, 255, 0.2);
+    color: rgb(0, 217, 255, 0.5);
 }
 
 @media screen and (max-width: 800px) {
@@ -903,11 +903,11 @@ body {
   }
 
   .email-button {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 217, 255, 0.5);
     padding: 20px 32px;
     margin-top: 40px;
     background: transparent;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(0, 217, 255, 0.5);
     border-radius: 5px;
     font-family: monospace;
     font-size: 1.2em;
@@ -918,17 +918,16 @@ body {
 }
 
 .email-button a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 217, 255, 0.5);
     text-decoration: none;
 }
 
 .email-button:hover a {
-    color: black;
+    color: rgb(0, 217, 255, 0.5);
 }
 
 .email-button:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 217, 255, 0.2);
 }
   
 /********** About page Styles **********/
