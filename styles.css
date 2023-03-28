@@ -383,39 +383,19 @@ body {
 
 @media only screen and (max-width: 375px) {
     .content-wrapper-intro {
-      padding: 40px;
-      min-height: auto;
-      height: auto;
+      padding: 0 10px;
       text-align: center;
     }
-    
     .intro-content {
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0;
       align-items: center;
       text-align: center;
+      max-width: 100%;
     }
-    
-    .name-intro {
-      font-size: 2em;
-    }
-    
-    .welcome-intro {
-      font-size: 2.5em;
-    }
-    
     .paragraph-intro {
       max-width: 100%;
-      margin-right: 0;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 0.8em;
-    }
-    
-    .about-button-intro {
-      padding: 10px 20px;
-      margin-top: 30px;
-      font-size: 0.8em;
+      margin: 0;
+      padding: 0 10px;
     }
   }
 
