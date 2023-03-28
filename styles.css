@@ -144,6 +144,25 @@ body {
     animation: fadeInAnimation 1s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .brand {
+        margin-left: -8%;
+        margin-top: -5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .left-side-bar > .social-links {
+        width: 30px;
+        margin-left: 0%;
+    }
+
+    .left-side-bar::after {
+        margin-left: 15%;
+    }
+}
+
 /********** Social Links **********/
 .left-side-bar {
     width: 100px;
@@ -184,6 +203,18 @@ body {
 
 .social-links img:hover {
     transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+
+    .left-side-bar > .social-links {
+        width: 30px;
+        margin-left: 0%;
+    }
+
+    .left-side-bar::after {
+        margin-left: 15%;
+    }
 }
 
 /********** Vertical Email Stlyes **********/
@@ -249,6 +280,18 @@ body {
     transition: color 0.5s;
 }
 
+@media (max-width: 768px) {
+    .email-vertical {
+        font-size: 0.8em;
+        right: 0px;
+        padding-right: 0px;
+    }
+
+    .right-side-bar::after {
+        margin-left: 93%;
+    }
+}
+
 /********** Resume Button Styles **********/
 .resume-button {
     color: rgb(0, 217, 255, 0.5);
@@ -289,6 +332,7 @@ body {
 @media (max-width: 768px) {
     .hamburger {
       display: block;
+      margin: -10%;
     }
   
     .right-side {
@@ -299,13 +343,19 @@ body {
       display: flex;
       flex-direction: column;
       position: absolute;
+      justify-content: center;
       top: 100%;
       left: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.892);
       backdrop-filter: blur(10px);
     }
+
+    .resume-button {
+        margin-right: 40px;
+    }
 }
+
 /***************************************************************/
 /*                         Main Styles                         */
 /***************************************************************/
@@ -382,33 +432,37 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+    
     .intro-content {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
+        margin-left: 100px;
         margin-right: 10px;
     }
     
     .text-color-intro {
-        font-size: 0.5em;
+        font-size: 0.8em;
+        margin-left: -4%;
     }
     
     .name-intro {
-        font-size: 1em;
+        font-size: 1.5em;
+        margin-left: -6%;
     }
 
     .welcome-intro {
-        font-size: 1em;
+        font-size: 1.5em;
+        margin-left: -4%;
     }
 
     .paragraph-intro {
-        font-size: 0.5em;
+        font-size: 0.8em;
+        margin-left: -2%;
     }
 
     .about-button-intro {
         padding: 5px 20px;
         margin-top: 10px;
         font-size: 0.5em;
+        margin-left: -10%;
     }
 }
 
