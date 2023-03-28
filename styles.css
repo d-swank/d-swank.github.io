@@ -119,10 +119,6 @@ body {
     animation: fadeInAnimation 0.5s ease-in-out;
 }
 
-/* .nav-link-text.active {
-    color: rgb(0, 217, 255);
-  } */
-
 .right-side {
     display: flex;
     font-size: 0.8em;
@@ -251,14 +247,6 @@ body {
     text-decoration: none;
     transition: color 0.5s;
 }
-
-/* .active-nav-link {
-    border-bottom: 1px solid rgb(0, 217, 255);
-}
-
-.active-nav-link a{
-    color: rgb(0, 217, 255) !important;
-} */
 
 /* Resume Button Styles */
 .resume-button {
@@ -392,12 +380,77 @@ body {
 }
 
 /* Education Styles */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(-75%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateX(-25%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(75%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    75% {
+        transform: translateX(25%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-from-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: slideInFromLeft 3s ease-in;
+}
+
+.slide-in-from-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: slideInFromRight 3s ease-in;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 3s ease-in;
+}
+
 .section-header-academics {
     display: flex;
     justify-content: left;
     align-items: left;
     flex-direction: column;
-    padding-left: 30px;
+    padding: 30px;
+    margin-top: 100px;
 }
 
 .section-header-academics h2 {
@@ -413,6 +466,7 @@ body {
     margin-top: 30px;
     width: 100%;
     max-width: 1200px;
+    height: 100vh;
 }
 
 .item-wrapper-academics {
@@ -432,6 +486,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     margin-right: 65%;
@@ -442,6 +497,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     margin-left: 65%;
@@ -450,15 +506,14 @@ body {
 
 .img-bkgrd-miracosta, .img-bkgrd-CSUSM {
     filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
-    transition: 0.5s;
-    border-radius: 10px;
+    transition: filter 0.3s ease-in-out, transform 0.5s;
+    border-radius: 5px;
 }
 
 .item-wrapper-academics:hover .img-bkgrd-miracosta,
 .item-wrapper-academics:hover .img-bkgrd-CSUSM {
     filter: grayscale(0%);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .item-info-academics-associates {
@@ -478,9 +533,9 @@ body {
 }
 
 .text-box {
-    background-color: rgb(62, 62, 62); 
-    border-radius: 5px; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 15px;
 }
 
@@ -494,9 +549,181 @@ body {
     text-align: left;
 }
 
+.logo-wrapper-academics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* opacity: 0; */
+    /* transition: opacity 0.5s; */
+}
+
+.logo-wrapper-academics img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+}
+
+.item-wrapper-academics:hover .logo-wrapper-academics {
+    /* opacity: 1; */
+}
+
 /* Work Experience Styles */
+.section-header-work {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 200px;
+}
+
+.section-header-work h2 {
+    color: white;
+    margin-bottom: 60px;
+}
+
+.content-wrapper-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-wrapper-work {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+}
+
+.img-bkgrd-work {
+    flex: 1;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-top: -40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out, transform 0.5s;
+    border-radius: 5px;
+}
+
+.item-wrapper-work:hover .img-bkgrd-work {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+}
+
+.item-wrapper-work:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo-wrapper-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-wrapper-work img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+}
+
+.item-info-work {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #2d2d2d;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.subtitle-work {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 /* Project Styles */
+.section-header-projects {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 200px;
+}
+
+.section-header-projects h2 {
+    color: white;
+}
+
+.content-wrapper-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    width: calc(33.33% - 20px); 
+    margin: 10px;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.project:hover .project-overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 /* About page Styles */
 .two-column-wrapper {

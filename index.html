@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -99,17 +103,18 @@
             </div>
         </div>
 
-       <!-------------------- Academics  -------------------->
+        <!-------------------- Academics  -------------------->
         <div id="education" class="section-header-academics">
             <h2>Education</h2>
             <div class="content-wrapper-academics">
                 <div class="items-wrapper-academics">
                     <div class="item-wrapper-academics" style="cursor:default">
-                        <div class="img-bkgrd-miracosta" style="background-image:url(images/miracosta.jpg)"></div>
+                        <div class="img-bkgrd-miracosta" style="background-image:url(images/miracosta.jpg)">
+                            <div class="logo-wrapper-academics">
+                                <img src="images/logos/miracostalogo.png">
+                            </div>
+                        </div>
                         <div class="item-info-academics-associates">
-                            <!-- <div class="logo-wrapper-academics">
-                                <img src="images/logos/miracostalogo-grayscale.png">
-                            </div> -->
                             <div class="item-text-academics-miracosta">
                                 <div class="text-box">
                                     <p>2019 - 2021</p>
@@ -120,11 +125,12 @@
                         </div>
                     </div>
                     <div class="item-wrapper-academics" style="cursor:default">
-                        <div class="img-bkgrd-CSUSM" style="background-image:url(images/CSUSM.jpg)"></div>
+                        <div class="img-bkgrd-CSUSM" style="background-image:url(images/CSUSM.jpg)">
+                            <div class="logo-wrapper-academics">
+                                <img src="images/logos/csusmlogo.png">
+                            </div>
+                        </div>
                         <div class="item-info-academics-bachelors">
-                            <!-- <div class="logo-wrapper-academics">
-                                <img src="images/logos/csusmlogo-grayscale.png">
-                            </div> -->
                             <div class="item-text-academics-CSUSM">
                                 <div class="text-box">
                                     <p>2022 - 2023</p>
@@ -138,27 +144,27 @@
             </div>
         </div>
 
-       <!-------------------- Work Experience  -------------------->
+       <!------------------ Work Experience  ------------------>
         <div id="work-experience" class="section-header-work">
-            <h2>Work</h2>
+            <h2>Experience</h2>
             <div class="content-wrapper-work">
-                <div class="items-wrapper-work">
-                    <div class="item-wrapper-work">
-                        <div class="item-img-background-work" style="background-image:url(images/Boeing787Plant.jpg)"></div>
-                        <div class="item-info-work">
-                            <!-- <div class="logo-wrapper-work">
-                                <img src="images/logos/boeinglogo.png">
-                            </div> -->
-                            <div class="subtitle-work">
-                                Software Application Tester
-                            </div>
-                            <p>Writes, executes and reports test cases performed for web-based applications and creates various
-                                regression testing scenarios to evaluate effectiveness, quality, and scalability performance
-                                of web-based tools used across the customer enterprise and across the broader Intelligence
-                                Community (IC).</p>
-                            <p>PLs used: JavaScript, SQL </p>
-                            <p>Frameworks: Angular</p>
+                <div class="item-wrapper-work">
+                    <div class="img-bkgrd-work" style="background-image:url(images/Boeing787Plant.jpg)">
+                        <div class="overlay"></div>
+                        <div class="logo-wrapper-work">
+                            <img src="images/logos/boeinglogo.png">
                         </div>
+                    </div>
+                    <div class="item-info-work">
+                        <div class="subtitle-work">
+                            Software Application Tester
+                        </div>
+                        <p>Writes, executes and reports test cases performed for web-based applications and creates various
+                            regression testing scenarios to evaluate effectiveness, quality, and scalability performance
+                            of web-based tools used across the customer enterprise and across the broader Intelligence
+                            Community (IC).</p>
+                        <p>PLs used: JavaScript, SQL </p>
+                        <p>Frameworks: Angular</p>
                     </div>
                 </div>
             </div>
@@ -168,79 +174,65 @@
         <div id="projects" class="section-header-projects">
             <h2>Projects</h2>
             <div class="content-wrapper-projects">
-                <div class="items-wrapper-projects">
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/MusicLightDisplay.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Musical Light Display
-                            </div>
-                            <p>An embedded system utilizing a Nucleo board that uses push buttons to select
-                                a Christmas song. When a song plays, three LEDs flash to the notes of the song, displays
-                                the name of the song on an LCD screen and when the song is playing a potentiometer is used
-                                for volume control.</p>
-                            <p>PL used: C++</p>
-                        </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/MusicLightDisplay.png)"></div>
+                    <div class="project-overlay">
+                            <h3>Light Display</h3>
+                        <p>An embedded system utilizing a Nucleo board that uses push buttons to select
+                            a Christmas song. When a song plays, three LEDs flash to the notes of the song, displays
+                            the name of the song on an LCD screen and when the song is playing a potentiometer is used
+                            for volume control.</p>
+                        <p>PL used: C++</p>
                     </div>
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/Translator.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Japanese Translator
-                            </div>
-                            <p>Developed a translator that utilizes a deterministic finite automaton (DFA) to adhere to a
-                                specific set of rules. Using provided files containing various sentences, the program checks
-                                for syntactic and semantic accuracy. If the sentences pass this check, the program accurately
-                                parses and translates the story from Japanese to English. </p>
-                            <p>PL used: C++</p>
-                        </div>
+                </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/Translator.png)"></div>
+                    <div class="project-overlay">
+                        <h3>Japanese Translator</h3>
+                        <p>Developed a translator that utilizes a deterministic finite automaton (DFA) to adhere to a
+                            specific set of rules. Using provided files containing various sentences, the program checks
+                            for syntactic and semantic accuracy. If the sentences pass this check, the program accurately
+                            parses and translates the story from Japanese to English. </p>
+                        <p>PL used: C++</p>
                     </div>
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/LexGUI.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Lexical Analyzer GUI
-                            </div>
-                            <p>Created a GUI application using Tkinter that implemented a lexical analyzer by taking the input
-                                of source code, reading it line by line, getting the lexical analyzed result, and then parsing
-                                it into a parse tree. </p>
-                            <p>PL used: Python</p>
-                        </div>
+                </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/LexGUI.png)"></div>
+                    <div class="project-overlay">
+                        <h3>Lexical Analyzer GUI</h3>
+                        <p>Created a GUI application using Tkinter that implemented a lexical analyzer by taking the input
+                            of source code, reading it line by line, getting the lexical analyzed result, and then parsing
+                            it into a parse tree. </p>
+                        <p>PL used: Python</p>
                     </div>
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/DataStuctures.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Data Structures and Algorithms
-                            </div>
-                            <p>Assignments from CS 311 Data Structures & Algorithms class at CSUSM.</p>
-                            <p>PL used: C++</p>
-                        </div>
+                </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/DataStuctures.png)"></div>
+                    <div class="project-overlay">
+                        <h3>Data Structures and Algorithms</h3>
+                        <p>Assignments from CS 311 Data Structures & Algorithms class at CSUSM.</p>
+                        <p>PL used: C++</p>
                     </div>
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/OutbreakVR.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Outbreak VR
-                            </div>
-                            <p>A virtual reality horror game set in space. The player takes on the role of a character
-                                navigating through a dangerous space environment, where they can encounter
-                                various obstacles and enemies that can cause damage to their character. </p>
-                            <p>PL used: C#</p>
-                        </div>
+                </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/OutbreakVR.png)"></div>
+                    <div class="project-overlay">
+                        <h3>Outbreak VR</h3>
+                        <p>A virtual reality horror game set in space. The player takes on the role of a character
+                            navigating through a dangerous space environment, where they can encounter
+                            various obstacles and enemies that can cause damage to their character. </p>
+                        <p>PL used: C#</p>
                     </div>
-                    <div class="item-wrapper-projects">
-                        <div class="item-img-background-projects" style="background-image:url(images/FithubApp.png)"></div>
-                        <div class="item-info-projects">
-                            <div class="subtitle-projects">
-                                Fithub
-                            </div>
-                            <p>a fitness application that allows users to browse exercises, create customized workout plans,
-                                track their progress, and communicate with other users. The application utilizes a client-server
-                                architecture, with a User Module that provides a user-friendly interface for accessing the FitHub
-                                server's data tables.</p>
-                            <p>PLs used: HTML, CSS, JavaScript, SQL</p>
-                        </div>
+                </div>
+                <div class="project">
+                    <div class="project-img" style="background-image:url(images/FithubApp.png)"></div>
+                    <div class="project-overlay">
+                        <h3>Fithub</h3>
+                        <p>a fitness application that allows users to browse exercises, create customized workout plans,
+                            track their progress, and communicate with other users. The application utilizes a client-server
+                            architecture, with a User Module that provides a user-friendly interface for accessing the FitHub
+                            server's data tables.</p>
+                        <p>PLs used: HTML, CSS, JavaScript, SQL</p>
                     </div>
                 </div>
             </div>
@@ -255,20 +247,5 @@
         </div>
     </div>
 </body>
-<!-- <script>
-    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
-
-    portfolioItems.forEach(portfolioItem => {
-        portfolioItem.addEventListener('mouseover', () => {
-            portfolioItem.childNodes[1].classList.add('img-darken');
-            portfolioItem.childNodes[5].classList.add('fade-out');
-        })
-
-        portfolioItem.addEventListener('mouseout', () => {
-            portfolioItem.childNodes[1].classList.remove('img-darken');
-            portfolioItem.childNodes[5].classList.remove('fade-out');
-        })
-    })
-</script> -->
 <script src="script.js"></script>
 </html>
