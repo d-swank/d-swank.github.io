@@ -362,11 +362,11 @@ body {
 }
 
 .about-button-intro {
-    color: rgb(0, 217, 255);;
+    color: rgb(0, 217, 255);
     padding: 15px 30px;
     margin-top: 10%;
     background: transparent;
-    border: 1px solid rgb(0, 217, 255);;
+    border: 1px solid rgb(0, 217, 255);
     border-radius: 5px;
     font-size: 1em;
     outline: none;
@@ -455,7 +455,32 @@ body {
 
 .section-header-academics h2 {
     color: white;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
     margin-left: 10%;
+}
+
+.section-header-academics h2::before {
+    content: attr(data-number) '. ';
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+    margin-right: 20px;
+    color: rgb(0, 217, 255, 0.5);
+    position: absolute;
+    left: 0;
+}
+
+.section-header-academics h2::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + -12px);
+    height: 1px;
+    width: 300px;
+    margin-left: 10px;
+    background-color: rgb(82, 82, 82);
 }
 
 .items-wrapper-academics {
@@ -584,7 +609,31 @@ body {
 
 .section-header-work h2 {
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 110px;
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.section-header-work h2::before {
+    content: attr(data-number) '. ';
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+    margin-right: 20px;
+    color: rgb(0, 217, 255, 0.5);
+    position: absolute;
+    left: 0;
+}
+
+.section-header-work h2::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + -12px);
+    height: 1px;
+    width: 300px;
+    margin-left: 10px;
+    background-color: rgb(82, 82, 82);
 }
 
 .content-wrapper-work {
@@ -679,6 +728,31 @@ body {
 
 .section-header-projects h2 {
     color: white;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.section-header-projects h2::before {
+    content: attr(data-number) '. ';
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+    margin-right: 20px;
+    color: rgb(0, 217, 255, 0.5);
+    position: absolute;
+    left: 0;
+}
+
+.section-header-projects h2::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + -12px);
+    height: 1px;
+    width: 300px;
+    margin-left: 10px;
+    background-color: rgb(82, 82, 82);
 }
 
 .content-wrapper-projects {
@@ -701,6 +775,11 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+    filter: grayscale(100%);
+}
+
+.project:hover .project-img {
+    filter: grayscale(0%);
 }
 
 .project-overlay {
@@ -723,6 +802,7 @@ body {
 .project:hover .project-overlay {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.7);
+    filter: grayscale(0%);
 }
 
 /* About page Styles */
