@@ -55,8 +55,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
     transition: 2s;
 }
 
@@ -71,7 +71,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 68px;
+    height: 75px;
     z-index: 999;
     background-color: rgba(84, 84, 84, 0.2); 
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -434,7 +434,7 @@ body {
 @media screen and (max-width: 800px) {
     
     .intro-content {
-        margin-left: 100px;
+        margin-left: 10px;
         margin-right: 10px;
     }
     
@@ -536,25 +536,24 @@ body {
     justify-content: left;
     align-items: left;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 100px;
+    margin-top: 12%;
 }
 
 .section-header-academics h2 {
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 4%;
     position: relative;
     display: inline-block;
-    padding-left: 50px;
+    padding-left: 3%;
     margin-left: 10%;
 }
 
 .section-header-academics h2::before {
     content: attr(data-number) '. ';
-    font-size: 24px;
+    font-size: 1.3em;
     font-weight: bold;
     font-family: monospace;
-    margin-right: 20px;
+    margin-left: -2%;
     color: rgb(0, 217, 255, 0.5);
     position: absolute;
     left: 0;
@@ -565,8 +564,8 @@ body {
     position: absolute;
     top: calc(100% + -12px);
     height: 1px;
-    width: 300px;
-    margin-left: 10px;
+    width: 27%;
+    margin-left: 1%;
     background-color: rgb(82, 82, 82);
 }
 
@@ -575,9 +574,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 3%;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: 100vh;
 }
 
@@ -587,14 +586,14 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px;
+    padding: 1.5%;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
 }
 
 .img-bkgrd-miracosta {
-    width: 550px;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -605,7 +604,7 @@ body {
 }
 
 .img-bkgrd-CSUSM {
-    width: 550px;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -631,7 +630,7 @@ body {
 .item-info-academics-associates {
     position: relative;
     z-index: 1;
-    padding-top: 180px;
+    padding-top: 30%;
     width: 550px;
     margin-left: 100%;
 }
@@ -639,16 +638,16 @@ body {
 .item-info-academics-bachelors {
     position: relative;
     z-index: 1;
-    padding-top: 180px;
+    padding-top: 30%;
     width: 550px;
     margin-right: 100%;
 }
 
 .text-box {
     background-color: rgb(42, 42, 42);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 1%;
 }
 
 .item-text-academics-miracosta {
