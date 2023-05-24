@@ -538,6 +538,7 @@ body {
     flex-direction: column;
     padding: 30px;
     margin-top: 200px;
+    /* height: 100vh; */
 }
 
 .section-header-academics h2 {
@@ -593,12 +594,11 @@ body {
     padding: 1.5%;
     box-sizing: border-box;
     position: relative;
-    margin: 5%;
 }
 
 .img-bkgrd-miracosta {
-    width: 150%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -608,8 +608,8 @@ body {
 }
 
 .img-bkgrd-CSUSM {
-    width: 150%; 
-    height: 100%;
+    width: 100%; 
+    height: 50%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -618,6 +618,15 @@ body {
     margin-left: 65%;
     background-color: #555;
 }
+
+.item-wrapper-academics:first-child {
+    margin-bottom: -35%;  /* adjust as necessary */
+}
+
+.item-wrapper-academics:last-child {
+    margin-top: -35%;  /* adjust as necessary */
+}
+
 
 .img-bkgrd-miracosta, .img-bkgrd-CSUSM {
     filter: grayscale(100%);
@@ -635,7 +644,7 @@ body {
     position: relative;
     z-index: 1;
     padding-top: 40%;
-    padding-left: 50%;
+    padding-left: 20%;
     width: 550px;
     margin-left: 100%;
 }
@@ -644,7 +653,7 @@ body {
     position: relative;
     z-index: 1;
     padding-top: 40%;
-    padding-right: 50%;
+    padding-right: 20%;
     width: 550px;
     margin-right: 100%;
 }
@@ -654,16 +663,19 @@ body {
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 1%;
+    margin-bottom: 5%;
+    position: relative;
+    z-index: 1;
 }
 
 .item-text-academics-miracosta {
     color: rgb(255, 255, 255);
-    text-align: right;
+    text-align: center;
 }
 
 .item-text-academics-CSUSM {
     color: rgb(255, 255, 255);
-    text-align: left;
+    text-align: center;
 }
 
 .logo-wrapper-academics {
@@ -697,6 +709,7 @@ body {
     flex-direction: column;
     padding: 30px;
     margin-top: 200px;
+    height: 100vh;
 }
 
 .section-header-work h2 {
@@ -747,7 +760,7 @@ body {
 
 .img-bkgrd-work {
     flex: 1;
-    height: 400px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     margin-top: -40px;
@@ -820,6 +833,7 @@ body {
     flex-direction: column;
     padding: 30px;
     margin-top: 200px;
+    height: 100vh;
 }
 
 .section-header-projects h2 {
@@ -856,7 +870,7 @@ body {
 }
 
 .tabs {
-    max-width: 965px;
+    max-width: 75%;
     background-color: rgb(0, 0, 0);
     padding: 30px;
     box-shadow: 0px 2px 16px rgb(0, 0, 0, 0.1);
@@ -874,7 +888,7 @@ body {
 }
 
 .tab-menu .tab-menu-item {
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: rgb(103, 103, 103);
     margin-bottom: 20px;
@@ -885,7 +899,6 @@ body {
 
 .tabs .tab-menu-item.active {
     color: rgb(0, 217, 255, 0.5);
-
 }
 
 /* .tab-content-wrapper {
@@ -927,11 +940,13 @@ body {
 
 .tab-content-wrapper .project-content p {
     color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .line {
     position: absolute;
-    top: 62px;
+    top: 77px;
     left: 0;
     width: 90px;
     height: 5px;
@@ -947,6 +962,7 @@ body {
     justify-content: center;
     margin-top: 200px;
     margin-bottom: 100px;
+    height: calc(100vh - 300px);
 }
   
 .section-header-contact h2 {
