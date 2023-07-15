@@ -598,6 +598,7 @@ body {
 }
 
 .items-wrapper-academics {
+    cursor: default;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -620,6 +621,7 @@ body {
 }
 
 .img-bkgrd-miracosta {
+    background-image: url('images/miracosta.jpg');
     width: 100%;
     height: 50%;
     background-size: cover;
@@ -631,6 +633,7 @@ body {
 }
 
 .img-bkgrd-CSUSM {
+    background-image: url('images/CSUSM.jpg');
     width: 100%; 
     height: 50%;
     background-size: cover;
@@ -691,6 +694,10 @@ body {
     z-index: 1;
 }
 
+.text-box p:not(:last-child) {
+    margin-bottom: 1em;
+}
+
 .item-text-academics-miracosta {
     color: rgb(255, 255, 255);
     text-align: center;
@@ -720,11 +727,111 @@ body {
     object-fit: contain;
 }
 
+/* Adjust for 17 inch screens - typically around 1920px width */
+@media screen and (max-width: 1920px) {
+    .item-wrapper-academics {
+        padding: 1%;
+        /* Remove negative margins */
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* Adjust item info positioning */
+    .item-info-academics-associates,
+    .item-info-academics-bachelors {
+        padding-top: 25%;
+        width: 450px;
+    }
+
+    .item-info-academics-associates {
+        padding-left: 10%;
+    }
+
+    .item-info-academics-bachelors {
+        padding-right: 10%;
+    }
+
+    /* Adjust positioning of image backgrounds */
+    .img-bkgrd-miracosta {
+        margin-right: 60%;
+    }
+
+    .img-bkgrd-CSUSM {
+        margin-left: 60%;
+    }
+}
+
+/* Adjust for 13 inch screens - typically around 1366px width */
+@media screen and (max-width: 1366px) {
+    .item-wrapper-academics {
+        padding: 1%;
+        /* Remove negative margins */
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* Adjust item info positioning */
+    .item-info-academics-associates,
+    .item-info-academics-bachelors {
+        padding-top: 30%;
+        width: 400px;
+    }
+
+    .item-info-academics-associates {
+        padding-left: 5%;
+    }
+
+    .item-info-academics-bachelors {
+        padding-right: 5%;
+    }
+
+    /* Adjust positioning of image backgrounds */
+    .img-bkgrd-miracosta {
+        margin-right: 50%;
+    }
+
+    .img-bkgrd-CSUSM {
+        margin-left: 50%;
+    }
+}
+
+/* Adjust for screens smaller than 13 inch - typically around 1280px width */
+@media screen and (max-width: 1280px) {
+    .item-wrapper-academics {
+        padding: 0.5%;
+    }
+
+    /* Adjust item info positioning */
+    .item-info-academics-associates,
+    .item-info-academics-bachelors {
+        padding-top: 25%;
+        width: 350px;
+    }
+
+    .item-info-academics-associates {
+        padding-left: 5%;
+    }
+
+    .item-info-academics-bachelors {
+        padding-right: 5%;
+    }
+
+    /* Adjust positioning of image backgrounds */
+    .img-bkgrd-miracosta {
+        margin-right: 45%;
+    }
+
+    .img-bkgrd-CSUSM {
+        margin-left: 45%;
+    }
+}
+
+
 /* 13in displays */
-@media screen and (max-width: 1800px) {
+/* @media screen and (max-width: 1800px) { */
 
     /* Education Styles */
-    .items-wrapper-academics {
+    /* .items-wrapper-academics {
         height: 100vh;
     }
 
@@ -760,7 +867,7 @@ body {
         max-width: 100%;
         max-height: 100%;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     .section-header-academics {
@@ -807,8 +914,6 @@ body {
         max-height: 60%;
     }
 }
-
-
 
 /* .item-wrapper-academics:hover .logo-wrapper-academics {
     opacity: 1;
