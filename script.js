@@ -3,15 +3,19 @@ const navbarWrapper = document.querySelector('.navbar-wrapper');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-  const currentScrollTop = window.pageYOffset;
+  // If screen width is <= 768px exit the function early
+  // if (window.innerWidth <= 768) {
+  //   return;
+  // }
+  
+  const currentScrollTop = window.scrollY;
 
   if (currentScrollTop <= lastScrollTop) {
     navbarWrapper.classList.remove('scrolling');
-  } 
-
-  else {
+  } else {
     navbarWrapper.classList.add('scrolling');
   }
+  
   lastScrollTop = currentScrollTop;
 });
 

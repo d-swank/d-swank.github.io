@@ -1,4 +1,4 @@
-/********** Master Styles **********/
+/******************************** Master Styles ********************************/
 html {
     overflow-x: hidden;
     max-width: 100%;
@@ -11,11 +11,20 @@ body {
     max-width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 * {
     -webkit-font-smoothing: antialiased;
 }
 
-/********** Scrollbar Styles **********/
+/******************************** Scrollbar Styles ********************************/
 /* Entire scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
@@ -60,7 +69,7 @@ body {
     transition: 2s;
 }
 
-/********** Nav Bar Styles **********/
+/******************************** Nav Bar Styles ********************************/
 .hide-navbar {
     transform: translateY(-100%);
     transition: transform 0.3s;
@@ -71,7 +80,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 95px;
+    height: auto;
     z-index: 999;
     background-color: rgba(84, 84, 84, 0.2); 
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -91,7 +100,15 @@ body {
     animation: fadeInAnimation 1s ease-in-out;
 }
 
-/********** Nav Link Styles **********/
+@media only screen and (max-width: 768px) {
+    .navbar-wrapper {
+        height: auto;
+        background-color: black; 
+        backdrop-filter: none;
+    }
+}
+
+/******************************** Nav Link Styles ********************************/
 .nav-link {
     position: relative;
 }
@@ -129,7 +146,7 @@ body {
     animation: fadeInAnimation 1s ease-in-out;
 }
 
-/********** Logo Styles **********/
+/******************************** Logo Styles ********************************/
 .brand {
     position: absolute;
     z-index: 1000;
@@ -148,26 +165,22 @@ body {
     transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .brand {
         margin-left: -8%;
         margin-top: -5%;
     }
-}
 
-@media (max-width: 768px) {
-
-    .left-side-bar > .social-links {
-        width: 30px;
-        margin-left: 0%;
+    .logo-image {
+        height: auto;
     }
 
-    .left-side-bar::after {
-        margin-left: 15%;
+    .logo-image:hover {
+        transform: none;
     }
 }
 
-/********** Social Links **********/
+/******************************** Social Links ********************************/
 .left-side-bar {
     width: 100px;
     height: 100vh;
@@ -209,19 +222,13 @@ body {
     transform: scale(1.3);
 }
 
-@media (max-width: 768px) {
-
-    .left-side-bar > .social-links {
-        width: 30px;
-        margin-left: 0%;
-    }
-
-    .left-side-bar::after {
-        margin-left: 15%;
+@media only screen and (max-width: 768px) {
+    .left-side-bar {
+        visibility: hidden;
     }
 }
 
-/********** Vertical Email Stlyes **********/
+/******************************** Vertical Email Stlyes ********************************/
 .email-vertical {
     font-family: monospace;
     font-size: 1.1em;
@@ -290,19 +297,13 @@ body {
     transition: color 0.5s;
 }
 
-@media (max-width: 768px) {
-    .email-vertical {
-        font-size: 0.8em;
-        right: 0px;
-        padding-right: 0px;
-    }
-
-    .right-side-bar::after {
-        margin-left: 93%;
+@media only screen and (max-width: 768px) {
+    .right-side-bar {
+        visibility: hidden;
     }
 }
 
-/********** Resume Button Styles **********/
+/******************************** Resume Button Styles ********************************/
 .resume-button {
     color: rgb(0, 217, 255, 0.5);
     font-family: monospace;
@@ -324,7 +325,7 @@ body {
     
 }
 
-/********** Hamburger Styles **********/
+/******************************** Hamburger Styles ********************************/
 .hamburger {
     display: none;
     cursor: pointer;
@@ -341,7 +342,7 @@ body {
     background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .hamburger {
       display: block;
       margin: -10%;
@@ -349,6 +350,11 @@ body {
   
     .right-side {
       display: none;
+      padding-left: 5%;
+    }
+
+    .left-side-bar {
+        display: none;
     }
   
     .right-side.responsive {
@@ -358,13 +364,15 @@ body {
       justify-content: center;
       top: 100%;
       left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.892);
-      backdrop-filter: blur(10px);
+      width: 100vw;
+      background-color: black;
+      backdrop-filter: none;
     }
 
     .resume-button {
-        margin-right: 40px;
+        margin-right: 10%;
+        margin-top: 1.5%;
+        margin-bottom: 5%;
     }
 }
 
@@ -372,7 +380,7 @@ body {
 /*                         Main Styles                         */
 /***************************************************************/
 
-/********** Introduction Styles **********/
+/******************************** Introduction Styles ********************************/
 .content-wrapper-intro {
     min-height: 100vh;
     justify-content: center;
@@ -445,51 +453,54 @@ body {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
     
     .content-wrapper-intro {
-        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
-}
-
-@media screen and (max-width: 800px) {
     
     .intro-content {
-        margin-left: 10px;
-        margin-right: 10px;
+        width: 45%; 
+        margin-left: auto;
+        box-sizing: content-box;
     }
     
     .text-color-intro {
-        font-size: 0.8em;
-        margin-left: -4%;
+        font-size: 0.9em;
+        word-wrap: break-word;
     }
     
     .name-intro {
         font-size: 1.5em;
-        margin-left: -6%;
+        word-wrap: break-word;
     }
 
     .welcome-intro {
         font-size: 1.5em;
-        margin-left: -4%;
+        word-wrap: break-word;
+        line-height: normal;
     }
 
     .paragraph-intro {
-        font-size: 0.8em;
-        margin-left: -2%;
+        font-size: 0.9em;
+        max-width: 100%;
+        word-wrap: break-word;
     }
 
     .about-button-intro {
-        padding: 5px 20px;
-        margin-top: 10px;
-        font-size: 0.5em;
-        margin-left: -10%;
+        padding: 10px 25px;
+        margin-top: 15px;
+        font-size: 0.8em;
+        word-wrap: break-word;
     }
 }
 
-/********** Education Styles **********/
+/******************************** Education Styles ********************************/
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -727,6 +738,82 @@ body {
     object-fit: contain;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .item-wrapper-academics {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.5%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .section-header-academics h2::before {
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+    
+    .section-header-academics h2::after {
+        top: calc(100% + -12px);
+    }
+    
+    .slide-in-from-left {
+        transform: none;
+        transition: none;
+    }
+    
+    .slide-in-from-right {
+        transform: none;
+        transition: none;
+    }
+    
+    .section-header-academics h2 {
+        margin-right: 0;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .items-wrapper-academics {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3%;
+    }
+
+    .img-bkgrd-miracosta, 
+    .img-bkgrd-CSUSM {
+        width: 100%;
+        height: auto; 
+        margin-right: 0;
+        margin-left: 0;
+        position: relative;
+        top: auto;
+    }
+
+    .item-info-academics-associates, 
+    .item-info-academics-bachelors {
+        padding-top: 5%; 
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+    .item-wrapper-academics:first-child,
+    .item-wrapper-academics:last-child {
+        margin-bottom: 10%; 
+        margin-top: 10%; 
+    }
+
+    .logo-wrapper-academics {
+        position: relative;
+    }
+    
+}
+
 /* Adjust for 17 inch screens - typically around 1920px width */
 @media screen and (max-width: 1920px) {
     .item-wrapper-academics {
@@ -828,10 +915,9 @@ body {
 
 
 /* 13in displays */
-/* @media screen and (max-width: 1800px) { */
+/* @media screen and (max-width: 1800px) {
 
-    /* Education Styles */
-    /* .items-wrapper-academics {
+    .items-wrapper-academics {
         height: 100vh;
     }
 
@@ -919,7 +1005,7 @@ body {
     opacity: 1;
 } */
 
-/********** Work Experience Styles **********/
+/******************************** Work Experience Styles ********************************/
 .section-header-work {
     display: flex;
     justify-content: flex-start;
@@ -1062,7 +1148,7 @@ body {
     }
 }
 
-/********** Project Styles **********/
+/******************************** Project Styles ********************************/
 .section-header-projects {
     display: flex;
     justify-content: flex-start;
@@ -1220,7 +1306,7 @@ body {
     }
 }
 
-/* Contact Styles */
+/******************************** Contact Styles ********************************/
 .section-header-contact {
     display: flex;
     flex-direction: column;
@@ -1326,7 +1412,7 @@ body {
     }
 }
   
-/********** About page Styles **********/
+/******************************** About page Styles ********************************/
 .two-column-wrapper {
     display: grid;
     grid-template-rows: 1fr 1fr;
