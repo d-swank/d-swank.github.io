@@ -16,69 +16,70 @@
   gtag('config', 'G-MWLGB6QEZL');
 </script>
 <body>
-    <div class="container">
-         <!-------------------- Navigation  -------------------->
-        <div class="left-side-bar">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png"></a>
-                <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png"></a>
+    <!-- ------------------ Navigation  -------------------->
+    <div class="social-links-wrapper">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png" alt="LinkedIn Icon"></a>
+            <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png" alt="GitHub Icon"></a>
+        </div>
+    </div>
+
+    <div class="email-vertical-wrapper">
+        <div class="email-vertical">
+            <a href="mailto:contact@swanksoftware.com">contact@swanksoftware.com</a>
+        </div>
+    </div>
+
+    <nav class="navbar-wrapper">
+        <div class="brand-wrapper">
+            <div class="brand">
+                <a href="index.html" title="Dakota Swank's logo">
+                    <img src="images/logos/DS-Logo.png" class="logo-image" alt="Dakota Swank's logo">
+                </a>
             </div>
         </div>
 
-        <div class="right-side-bar">
-            <div class="email-vertical">
-                <a href="mailto:contact@swanksoftware.com">contact.swanksoftware.com</a>
+        <button class="hamburger" type="button" onclick="toggleMenu()" title="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <div class="nav-links-wrapper">
+            <div class="nav-link-wrapper">
+                <a href="#education" class="nav-link" data-number="01">Education</a>
             </div>
-        </div>
-        
-        <div class ="navbar-wrapper">
-            <nav class="nav-wrapper">
-                <div class="left-side">
-                    <div class="brand">
-                        <a href="index.html">
-                            <img src="images/logos/DS-Logo.png" class="logo-image">
-                        </a>
-                    </div>
-                </div>
 
-                <button class="hamburger" onclick="toggleMenu()">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-
-                <div class="right-side">
-                    <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
-                </div>
-            </nav>
-        </div>
-
-        <div class="content-wrapper">
-            <div class="two-column-wrapper">
-                <div class="profile-image-wrapper">
-
-                </div>
-
-                <div class="profile-content-wrapper">
-                    <h1>Hi, thanks for visiting my site.</h1>
-                    <p>In my years of being in the Navy, I have gained many invaluable skills that helped me become 
-                        the person I am today. During my time onboard the USS Carl Vinson (CVN 70), I grew into an 
-                        outstanding leader and rigging supervisor while serving as one of the most trusted individuals 
-                        in the most dangerous and complex evolutions and missions. As a Rig Captain, I successfully completed 
-                        23 Underway Replenishment evolutions in the delivery of 1,356 pallets of Cargo and 25 million gallons 
-                        of fuel with zero safety mishaps. I successfully conducted a critical task of driving a 1,100-foot 
-                        aircraft carrier through 16 special evolutions traveling over 12,000 miles and 4 successful Pacific 
-                        deployments. My talents and credentials far exceed those of my peers with a proven track record of 
-                        leading other coworkers to success in every task assigned to me. Now I am currently pursuing a 
-                        bachelor’s degree in Computer Science and am on track to get my degree at the end of May 2023. 
-                        I am confident that with the skills and experience that I have gained from my past in the Navy, 
-                        I will make an excellent addition to any organization seeking a Software Engineer and contribute 
-                        immensely to the company’s success.
-                    </p>
-                </div>
+            <div class="nav-link-wrapper">
+                <a href="#work-experience" class="nav-link" data-number="02">Experience</a>
             </div>
-            
+
+            <div class="nav-link-wrapper">
+                <a href="#projects" class="nav-link" data-number="03">Projects</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a href="#contact" class="nav-link" data-number="04">Contact</a>
+            </div>
+
+            <button class="resume-button" onclick="location.href='res/Resume.pdf'" >Resume</button>
         </div>
+    </nav>
+    <div class="about-wrapper">
+        <div class="about-header">Hi, thanks for visiting my site.</div>
+        <div class="about-content">In my years of being in the Navy, I have gained many invaluable skills that 
+            helped me become the person I am today. During my time onboard the USS Carl Vinson (CVN 70), I grew into an 
+            outstanding leader and rigging supervisor while serving as one of the most trusted individuals 
+            in the most dangerous and complex evolutions and missions. As a Rig Captain, I successfully completed 
+            23 Underway Replenishment evolutions in the delivery of 1,356 pallets of Cargo and 25 million gallons 
+            of fuel with zero safety mishaps. I successfully conducted a critical task of driving a 1,100-foot 
+            aircraft carrier through 16 special evolutions traveling over 12,000 miles and 4 successful Pacific 
+            deployments. My talents and credentials far exceed those of my peers with a proven track record of 
+            leading other coworkers to success in every task assigned to me. Now I am currently pursuing a 
+            bachelor’s degree in Computer Science and am on track to get my degree at the end of May 2023. 
+            I am confident that with the skills and experience that I have gained from my past in the Navy, 
+            I will make an excellent addition to any organization seeking a Software Engineer and contribute 
+            immensely to the company’s success.</div>
     </div>
 </body>
 </html>

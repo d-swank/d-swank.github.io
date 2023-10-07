@@ -63,12 +63,15 @@ body {
 
 /****************************** Main Nav Bar Styles ******************************/
 .navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 40px 15px;
-    background-color: rgba(1, 1, 1, 0.2); 
+    padding: 20px;
+    background-color: rgba(1, 1, 1, 0); 
     z-index: 1000;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     backdrop-filter: blur(10px);
@@ -80,6 +83,7 @@ body {
     transform: translateY(-100%);
 }
 
+/******************************** Nav Link Styles ********************************/
 .nav-links-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -87,7 +91,6 @@ body {
     animation: fadeInAnimation 1s ease-in-out;
 }
 
-/******************************** Nav Link Styles ********************************/
 .nav-link {
     display: flex;
     position: relative;
@@ -96,7 +99,7 @@ body {
     color: white;
     font-size: 1rem;
     margin-left: 3rem;
-    padding: 15px 0px;
+    padding: 15px 0;
     justify-content: space-evenly;
 }
 
@@ -142,7 +145,7 @@ body {
     margin-left: 2rem;
     padding: 10px 15px;
     background: transparent;
-    border: 1px solid rgb(0, 217, 255, 0.5);
+    border: 2px solid rgb(0, 217, 255, 0.5);
     border-radius: 5px;
     font-size: 1.4em;
     outline: none;
@@ -160,8 +163,8 @@ body {
 
 /******************************** Logo Styles ********************************/
 .brand {
-    position: absolute;
-    padding: 10px 0px;
+    position: relative;
+    padding: 0 30px;
 }
 
 .logo-image {
@@ -188,20 +191,22 @@ body {
   
 .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
+    width: 30px;
+    height: 2px;
+    margin: 7px 0;
     background-color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar-wrapper {
-        padding: 25px 40px 15px;
+        padding: 25px 20px 5px;
+        margin: 0;
     }
     
     .brand {
         position: relative;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .nav-links-wrapper {
@@ -210,10 +215,9 @@ body {
     
     .hamburger {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 35px 60px 30px;   
+        position: relative;
+        padding-right: 0;
+        padding-left: 0; 
     }
 
     .nav-links-wrapper.responsive {
@@ -344,13 +348,13 @@ body {
     align-items: flex-start;
     height: 100vh;
     text-align: left; 
-    margin-left: 18%;
+    margin-left: 30%;
     animation: fadeInAnimation 2.5s ease-in-out;
 }
 
 .text-color-intro {
     color: rgb(0, 217, 255, 0.5);
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-family: monospace;
 }
 
@@ -358,39 +362,38 @@ body {
     display: inline;
     font-weight: bold;
     color: white;
-    font-size: 3em;
+    font-size: 5rem;
+    line-height: 0.9;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .welcome-intro {
     display: inline;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 4.5rem;
     color: grey;
+    line-height: 0.5;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.custom-line-height-intro {
-    line-height: 0.6;
-}
-
 .paragraph-intro {
-    max-width: 44%;
+    max-width: 35%;
     margin-right: auto;
-    line-height: 1.4;
+    line-height: 1.5;
     color: grey;
-    font-size: 1em;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .about-button-intro {
     color: rgb(0, 217, 255, 0.5);
-    padding: 15px 30px;
-    margin-top: 10%;
+    padding: 20px 30px;
+    margin-top: 15%;
     background: transparent;
     border: 1px solid rgb(0, 217, 255, 0.5);
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
+    font-family: monospace;
     outline: none;
     cursor: pointer;
     transition: 0.2s;
@@ -409,18 +412,30 @@ body {
         padding: 0 20px;
     }
 
+    .text-color-intro {
+        font-size: 0.9rem;
+        font-family: monospace;
+    }
+
     .name-intro {
-        font-size: 2.5em;
+        font-size: 2.4rem;
         line-height: 0.9;
     }
 
     .welcome-intro {
-        font-size: 3em;
+        font-size: 2.4rem;
         line-height: 0.9;
     }
 
     .paragraph-intro {
         max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .about-button-intro {
+        font-size: 0.9rem;
+        padding: 20px 20px;
     }
 }
 
@@ -466,8 +481,7 @@ body {
     .section-header {
         font-size: 1.2rem;
         margin-left: 5%;
-        padding-left: 10%;
-        
+        padding-left: 10%; 
     }
 
     .section-header::before {
@@ -665,6 +679,8 @@ body {
     .img-bkgrd-miracosta, .img-bkgrd-CSUSM {
         width: 100%; /* Takes full width on mobile */
         height: 200px;
+        transition: none; /* Removes the transition */
+        transform: none; /* Removes the transform */
     }
     
     .item-info-academics-associates, .item-info-academics-bachelors {
@@ -783,22 +799,40 @@ body {
         position: relative;
         width: 100%;
         height: 100vh;
-        overflow: hidden; /* This will hide content moving out of this container */
+        overflow: hidden;
     }
     
     .img-bkgrd-work {
+        position: absolute; 
+        top: 8%;
         width: 100%;
-        height: 400px; /* You can adjust this based on your preference */
-        position: relative; 
-        z-index: 2; /* This ensures the image stays above the text box */
+        height: 350px;
+        z-index: 2;
+        filter: 0;
+        transform: 0;
+        transition: 0;
+    }
+    
+    .item-wrapper-work:hover .img-bkgrd-work {
+        filter: none;
+        transform: 0;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: none;
+    }
+    
+    .item-wrapper-work:hover .overlay {
+        background-color: none;
     }
     
     .item-info-work {
         position: absolute;
-        top: 32%;
+        bottom: 18%;
         width: 100%;
-        z-index: 0; /* This ensures the text box is below the image */
-        transition: top 3s ease-in-out; /* This provides a smooth upward movement */
+        z-index: 0;
+        font-size: 0.8rem;
     }
 }
 
@@ -847,7 +881,7 @@ body {
 .tab-menu .tab-menu-item {
     font-size: 1.2rem;
     font-weight: 600;
-    color: rgb(103, 103, 103);
+    color: white;
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -889,10 +923,6 @@ body {
     to { transform: translateX(0px); opacity: 1; }
 }
 
-.tab-content-wrapper .project-content h3 {
-    margin-bottom: 10px;
-}
-
 .tab-content-wrapper .project-content p {
     color: rgb(255, 255, 255);
     font-size: 1rem;
@@ -930,7 +960,7 @@ body {
         max-width: 90%;
         padding: 20px;
         height: 65%;
-        background-color: #2d2d2d;
+        background-color: #111;
     }
 
     .tab-menu {
@@ -939,12 +969,12 @@ body {
     }
 
     .tab-menu .tab-menu-item {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 15px;
     }
 
     .tab-content-wrapper .project-content p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 25px;
     }
 
@@ -1057,4 +1087,34 @@ footer a {
 
 footer:hover a {
     color: rgb(0, 217, 255, 0.5);
+}
+
+/*********************************************************************************/
+/*                                  About Styles                                 */
+/*********************************************************************************/
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 80px 20px; /* Adds padding on all sides */
+    max-width: 80%; /* Adjust as needed */
+    margin: 50px auto; /* Centers the section with margin above and below */
+    animation: fadeInAnimation 1.5s ease-in-out; 
+}
+
+.about-header {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff; /* Dark grey for the text */
+    margin-bottom: 20px; /* Spacing between the header and content */
+}
+
+.about-content {
+    font-size: 1em;
+    color: #888; /* Medium grey for content text */
+    line-height: 1.5; /* Improved readability */
+    text-align: center; /* Centered text, can be changed to 'left' or 'justify' if preferred */
+    max-width: 70%; /* Line length control for better readability */
 }
