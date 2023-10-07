@@ -860,9 +860,9 @@ body {
 .tabs {
     max-width: 75%;
     height: 90%;
-    background-color: #2d2d2d;
+    background-color: #111;
     padding: 30px;
-    box-shadow: 0px 2px 16px rgb(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 16px rgb(0, 0, 0, 0.1); */
     border-radius: 20px;
     margin: 0 auto;
 }
@@ -968,6 +968,7 @@ body {
         padding: 20px;
         height: 65%;
         background-color: #111;
+        box-shadow: none;
     }
 
     .tab-menu {
@@ -1000,6 +1001,38 @@ body {
 /*********************************************************************************/
 /*                                 Contact Styles                                */
 /*********************************************************************************/
+.section-header-contact {
+    color: white;
+    margin: 5%;
+    position: relative;
+    display: block;
+    padding-left: 3%; 
+    font-family: monospace;
+    font-size: 1.4rem;
+    margin-left: 15%;
+    animation: fadeInAnimation 2.5s ease-in-out;
+}
+
+.section-header-contact::before {
+    content: attr(data-number) '. ';
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: rgb(0, 217, 255, 0.5);
+    position: absolute;
+    left: 0;
+
+}
+
+.section-header-contact::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + -12px);
+    height: 1px;
+    width: 30%;
+    margin-left: 10px;
+    background-color: rgb(82, 82, 82);
+}
 
 .content-wrapper-contact {
     display: flex;
@@ -1065,6 +1098,8 @@ body {
     
     .section-header-contact {
         font-size: 1.2rem;
+        margin-left: 5%;
+        padding-left: 10%; 
     }
 
     .section-header-contact::before {
@@ -1073,7 +1108,7 @@ body {
     }
 
     .section-header-contact::after {
-        width: 50%;
+        width: 40%;
     }
 
     .content-wrapper-contact {
