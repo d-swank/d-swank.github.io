@@ -679,6 +679,7 @@ body {
     .img-bkgrd-miracosta, .img-bkgrd-CSUSM {
         width: 100%; /* Takes full width on mobile */
         height: 200px;
+        margin: 0;
         transition: none; /* Removes the transition */
         transform: none; /* Removes the transform */
         overflow-x: hidden;
@@ -830,7 +831,7 @@ body {
     
     .item-info-work {
         position: absolute;
-        bottom: 24%;
+        bottom: 22%;
         width: 100%;
         z-index: 0;
         font-size: 0.8rem;
