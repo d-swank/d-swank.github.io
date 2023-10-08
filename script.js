@@ -21,8 +21,20 @@ window.addEventListener('scroll', () => {
 
 // Responisve Navbar for mobile (Hamburger menu)
 function toggleMenu() {
-  var menu = document.querySelector(".nav-links-wrapper");
-  menu.classList.toggle("responsive");
+  var responsiveNav = document.querySelector('.nav-links-wrapper');
+  responsiveNav.classList.toggle("responsive");
+  var overlay = document.querySelector('.overlay-blur');
+  var bodyElement = document.body;
+  
+  if (responsiveNav.style.display === 'none' || !responsiveNav.style.display) {
+      responsiveNav.style.display = 'flex';
+      overlay.style.display = 'flex';
+      bodyElement.style.overflow = 'hidden';
+  } else {
+      responsiveNav.style.display = 'none';
+      overlay.style.display = 'none';
+      bodyElement.style.overflow = '';
+    }
 }
 
 // SlideIn images effect for Academics Section
