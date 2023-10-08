@@ -146,7 +146,7 @@ body {
     padding: 10px 15px;
     background: transparent;
     border: 2px solid rgb(0, 217, 255, 0.5);
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 1.4em;
     outline: none;
     cursor: pointer;
@@ -232,40 +232,49 @@ body {
 
     .nav-links-wrapper {
         display: none;
+        flex-direction: column;
+        position: absolute;
     }
 
     .nav-link {
-        justify-content: none;
-        font-size: 1.2rem;
+        flex-direction: column; /* Changes the direction to column for mobile */
+        align-items: center; /* Centers the content horizontally */
+        margin: 0; /* Removes the margin around the nav links */
+        padding: 30px 0; /* Adds some padding around the nav links */
+        font-size: 1rem; /* Adjusts the value to change the size of the nav links */
     }
 
-    .nav-link:before {
-        font-size: 1.2rem;
+    .nav-link::before {
+        right: auto; /* Resets the right positioning */
+        bottom: 60px; /* Adjust this value to position the number */
+        margin-right: 0; /* Resets the right margin */
+        margin-left: 0; /* Resets the left margin */
+        font-size: 1rem; /* Adjust this value to change the size of the number */
     }
 
     .resume-button {
-        margin-top: 10%;
-        font-size: 1.2rem;
-        padding: 10px 40px; 
+        margin-top: 10%; 
+        margin-right: 10%;
+        font-size: 1rem; /* Adjust the value to change the size of the button */
+        padding: 15px 45px; /* Adjust the first value to change the height of the button */
     }
     
     .hamburger {
-        display: block;
-        position: fixed; /* This keeps the hamburger fixed on the screen */
-        top: 25px;
-        right: 20px;
+        display: block; /* Shows the hamburger */
+        position: fixed; /* Keeps the hamburger fixed on the screen */
+        top: 25px; /* Adjusts the value to move the hamburger up or down */
+        right: 20px; /* Adjusts the value to move the hamburger left or right */
         z-index: 1001; /* This ensures the hamburger is above the menu */
     }
 
     .nav-links-wrapper.responsive {
         flex-direction: column;
-        position: fixed; /* This makes the menu fixed covering the entire screen */
-        align-items: left;
+        position: fixed;
         justify-content: left;
-        top: -10%;
+        top: -12%;
         right: -3%;
         padding-left: 0;
-        padding-top: 75%;
+        padding-top: 60%;
         width: 70%;
         height: 100vh;
         background-color: #222;
