@@ -212,7 +212,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .navbar-wrapper {
-        padding: 20px 20px 5px;
+        padding: 15px 20px 5px;
         margin: 0;
         position: -webkit-sticky;
         position: sticky;
@@ -222,6 +222,12 @@ body {
         position: relative;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .logo-image { 
+        width: 55px;
+        height: auto;
+        padding-bottom: 1px;
     }
 
     .nav-links-wrapper {
@@ -246,7 +252,7 @@ body {
     .hamburger {
         display: block;
         position: fixed; /* This keeps the hamburger fixed on the screen */
-        top: 27px;
+        top: 25px;
         right: 20px;
         z-index: 1001; /* This ensures the hamburger is above the menu */
     }
@@ -446,6 +452,7 @@ body {
     .content-wrapper-intro {
         margin-left: 0;
         padding: 0 20px;
+        height: 90vh;
     }
 
     .text-color-intro {
