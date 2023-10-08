@@ -424,7 +424,7 @@ body {
 
     .welcome-intro {
         font-size: 2.4rem;
-        line-height: 0.9;
+        line-height: 0.8;
     }
 
     .paragraph-intro {
@@ -677,11 +677,11 @@ body {
     }
 
     .img-bkgrd-miracosta, .img-bkgrd-CSUSM {
-        width: 100%; /* Takes full width on mobile */
+        width: 100%;
         height: 200px;
         margin: 0;
-        transition: none; /* Removes the transition */
-        transform: none; /* Removes the transform */
+        transition: none;
+        transform: none;
         overflow-x: hidden;
     }
     
@@ -1132,7 +1132,7 @@ body {
     width: 50px;
     text-align: center;
     position: absolute;
-    margin-left: 42%;
+    margin-left: 40%;
     bottom: 0;
     transform: translateY(-50%);
     display: flex;
