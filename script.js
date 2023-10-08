@@ -3,16 +3,14 @@ const navbarWrapper = document.querySelector('.navbar-wrapper');
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-  // If screen width is <= 768px exit the function early
-  // if (window.innerWidth <= 768) {
-  //   return;
-  // }
   
   const currentScrollTop = window.scrollY;
 
   if (currentScrollTop <= lastScrollTop) {
     navbarWrapper.classList.remove('scrolling');
-  } else {
+  } 
+  
+  else {
     navbarWrapper.classList.add('scrolling');
   }
   
@@ -30,7 +28,9 @@ function toggleMenu() {
       responsiveNav.style.display = 'flex';
       overlay.style.display = 'flex';
       bodyElement.style.overflow = 'hidden';
-  } else {
+  } 
+  
+  else {
       responsiveNav.style.display = 'none';
       overlay.style.display = 'none';
       bodyElement.style.overflow = '';
@@ -115,24 +115,3 @@ const initialTab = tabs[0];
 const line = document.querySelector('.line');
 line.style.left = `${initialTab.offsetLeft}px`;
 line.style.width = `${initialTab.offsetWidth}px`;
-
-// SlideIn images effect for Work Section
-// window.addEventListener("scroll", function() {
-//   const section = document.querySelector('.item-wrapper-work');
-//   const textBox = document.querySelector('.item-info-work');
-//   const rect = section.getBoundingClientRect();
-//   const maxSlideUp = textBox.offsetHeight;
-
-//   if(rect.top <= window.innerHeight && rect.bottom >= textBox.offsetHeight) {
-//       const moveUpBy = ((window.innerHeight - rect.top) / window.innerHeight) * maxSlideUp; 
-//       const newTop = (moveUpBy / section.offsetHeight * 100) - 100;
-
-//       if (newTop > -32 && newTop < 0) { 
-//           textBox.style.top = `${newTop}%`; 
-//       } else if (newTop <= -32) {
-//           textBox.style.top = `3%`;  
-//       } else if (newTop >= 0) { 
-//           textBox.style.top = '0%';
-//       }
-//   }
-// });

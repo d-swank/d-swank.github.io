@@ -214,6 +214,8 @@ body {
     .navbar-wrapper {
         padding: 25px 20px 5px;
         margin: 0;
+        position: -webkit-sticky;
+        position: sticky;
     }
     
     .brand {
