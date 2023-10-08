@@ -1,6 +1,6 @@
 /******************************** Master Styles ********************************/
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     max-width: 100%;
 }
 
@@ -227,6 +227,21 @@ body {
     .nav-links-wrapper {
         display: none;
     }
+
+    .nav-link {
+        justify-content: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-link:before {
+        font-size: 1.2rem;
+    }
+
+    .resume-button {
+        margin-top: 10%;
+        font-size: 1.2rem;
+        padding: 10px 40px; 
+    }
     
     .hamburger {
         display: block;
@@ -241,13 +256,14 @@ body {
         position: fixed; /* This makes the menu fixed covering the entire screen */
         align-items: left;
         justify-content: left;
-        top: 0;
-        right: 0;
+        top: -10%;
+        right: -3%;
         padding-left: 0;
         padding-top: 75%;
-        width: 70%;
+        width: 75%;
         height: 100vh;
         background-color: #222;
+        animation: slideInFromRight 0.5s ease-in-out;
         z-index: 1000; /* This keeps the menu just below the hamburger but above the rest of the page content */
     }
 }
