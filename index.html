@@ -1,266 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-        <meta name="description" content="Dakota Swank's Portfolio Website">
-        <meta property="og:image" content="images/metalogo.png" />
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <title>Dakota Swank</title>
-        <link rel="icon" href="/favicon.ico">
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
-    </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWLGB6QEZL"></script>
-    <script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="Dakota Swank's Portfolio Website" />
+    <meta property="og:image" content="images/metalogo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Dakota Swank</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-MWLGB6QEZL"
+  ></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-MWLGB6QEZL');
-    </script>
-    <body>
-        <!-- ------------------ Navigation  -------------------->
-        <div class="social-links-wrapper">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png" alt="LinkedIn Icon"></a>
-                <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png" alt="GitHub Icon"></a>
-            </div>
+    gtag("config", "G-MWLGB6QEZL");
+  </script>
+  <body>
+    <!-- ------------------ Navigation  -------------------->
+    <div class="social-links-wrapper">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/d-swank/">
+          <img src="images/logos/linkedinicon.png" alt="LinkedIn Icon"
+        /></a>
+        <a href="https://github.com/d-swank">
+          <img src="images/logos/githubicon.png" alt="GitHub Icon"
+        /></a>
+      </div>
+    </div>
+
+    <div class="email-vertical-wrapper">
+      <div class="email-vertical">
+        <a href="mailto:contact@swanksoftware.com">
+          contact&commat;swanksoftware.com
+        </a>
+      </div>
+    </div>
+
+    <nav class="navbar-wrapper">
+      <div class="brand-wrapper">
+        <div class="brand">
+          <a href="index.html" title="Dakota Swank's logo">
+            <img
+              src="images/logos/DS-Logo.png"
+              class="logo-image"
+              alt="Dakota Swank's logo"
+            />
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="hamburger"
+        type="button"
+        onclick="toggleMenu()"
+        title="Menu"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="nav-links-wrapper">
+        <div class="nav-link-wrapper">
+          <a
+            href="#education"
+            class="nav-link"
+            data-number="01"
+            onclick="toggleMenu()"
+            >Education</a
+          >
         </div>
 
-        <div class="email-vertical-wrapper">
-            <div class="email-vertical">
-                <a href="mailto:contact@swanksoftware.com">contact@swanksoftware.com</a>
-            </div>
+        <div class="nav-link-wrapper">
+          <a
+            href="#work-experience"
+            class="nav-link"
+            data-number="02"
+            onclick="toggleMenu()"
+            >Experience</a
+          >
         </div>
 
-        <nav class="navbar-wrapper">
-            <div class="brand-wrapper">
-                <div class="brand">
-                    <a href="index.html" title="Dakota Swank's logo">
-                        <img src="images/logos/DS-Logo.png" class="logo-image" alt="Dakota Swank's logo">
-                    </a>
+        <div class="nav-link-wrapper">
+          <a
+            href="#projects"
+            class="nav-link"
+            data-number="03"
+            onclick="toggleMenu()"
+            >Projects</a
+          >
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a
+            href="#contact"
+            class="nav-link"
+            data-number="04"
+            onclick="toggleMenu()"
+          >
+            Contact
+          </a>
+        </div>
+
+        <button
+          class="resume-button"
+          onclick="location.href='res/Portfolio_Resume.pdf'"
+        >
+          Resume
+        </button>
+      </div>
+    </nav>
+    <div id="page-content">
+      <!-------------------- Introduction  -------------------->
+      <section class="content-wrapper-intro">
+        <h1 class="text-color-intro">Hi, my name is</h1>
+        <h2 class="custom-line-height-intro">
+          <span class="name-intro">Dakota Swank.</span>
+        </h2>
+        <h3 class="custom-line-height-intro">
+          <span class="welcome-intro">Welcome to my portfolio.</span>
+        </h3>
+        <p class="paragraph-intro">
+          I am a San Diego-based software engineer with a passion for creating
+          innovative and user-friendly solutions. With a strong foundation in
+          programming languages such as HTML, CSS, Javascript, C++ and Java, I
+          strive to develop efficient and high-quality applications that cater
+          to the diverse needs of clients across various industries.
+        </p>
+
+        <a href="about.html"
+          ><button class="about-button-intro">Learn More About Me!</button></a
+        >
+      </section>
+
+      <!-------------------- Academics  -------------------->
+      <section id="education">
+        <h2 class="section-header" data-number="01">Education</h2>
+        <div class="content-wrapper-academics">
+          <article class="item-wrapper-academics">
+            <div class="img-bkgrd-miracosta">
+              <div class="logo-wrapper-academics">
+                <img
+                  src="images/logos/miracostalogo.png"
+                  alt="Miracosta Logo"
+                />
+              </div>
+            </div>
+            <div class="item-info-academics-associates">
+              <div class="item-text-academics-miracosta">
+                <div class="text-box">
+                  <p>2019 - 2021</p>
+                  <p>Associate Degree for Transfer: Computer Science</p>
+                  <p>Honors: GPA: 3.76 | Phi Theta Kappa Honors Society</p>
                 </div>
+              </div>
             </div>
+          </article>
 
-            <button class="hamburger" type="button" onclick="toggleMenu()" title="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+          <article class="item-wrapper-academics">
+            <div class="img-bkgrd-CSUSM">
+              <div class="logo-wrapper-academics">
+                <img src="images/logos/csusmlogo.png" alt="CSUSM Logo" />
+              </div>
+            </div>
+            <div class="item-info-academics-bachelors">
+              <div class="item-text-academics-CSUSM">
+                <div class="text-box">
+                  <p>2022 - 2023</p>
+                  <p>Bachelor of Science: Computer Science</p>
+                  <p>
+                    Honors: GPA: 3.66 | Golden Key International Honor Society
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!------------------ Work Experience  ------------------>
+      <div id="work-experience">
+        <h2 class="section-header" data-number="02">Experience</h2>
+        <div class="content-wrapper-work">
+          <article class="item-wrapper-work">
+            <div class="img-bkgrd-work">
+              <div class="overlay"></div>
+              <div class="logo-wrapper-work">
+                <img src="images/logos/boeinglogo.png" alt="Boeing Logo" />
+              </div>
+            </div>
+            <div class="item-info-work">
+              <div class="subtitle-work">Software Application Tester</div>
+              <p>
+                In my role, I'm dedicated to enhancing the quality and
+                performance of web applications by developing and meticulously
+                executing test cases that scrutinize and improve functionality
+                and user experience. I use Jira to expertly manage test cases
+                and track defects, ensuring every issue is captured and resolved
+                thoroughly. My commitment to quality is matched by an agile
+                mindset; I actively engage in sprint planning and retrospectives
+                to constantly refine our team's work and the products we
+                develop. <br /><br />
+                I’ve embraced TestComplete for automating test scripts, making
+                sure that our quality assurance is as reliable as it is current.
+                Integrating Jenkins for continuous integration has been a
+                game-changer, automating regression tests with each code update
+                to swiftly catch and fix any defects. This approach is a
+                testament to my dedication to delivering software that stands
+                out for its high quality and strong user focus.
+              </p>
+              <p><b>Programming Languages Used:</b> Java, JavaScript, SQL</p>
+              <p>
+                <b>Tools Used:</b> Jira, GitLab, SoapUI, SQL Developer,
+                TortoiseSVN
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-------------------- Projects  -------------------->
+      <div id="projects">
+        <h2 data-number="03" class="section-header">Projects</h2>
+        <div class="content-wrapper-projects">
+          <div class="tabs">
+            <div class="tab-menu">
+              <button class="tab-menu-item active" data-project="project-1">
+                Fithub
+              </button>
+              <button class="tab-menu-item" data-project="project-2">
+                Outbreak VR
+              </button>
+              <button class="tab-menu-item" data-project="project-3">
+                Light Display
+              </button>
+              <button class="tab-menu-item" data-project="project-4">
+                Japanese Translator
+              </button>
+              <button class="tab-menu-item" data-project="project-5">
+                Lexical Analyzer GUI
+              </button>
+              <button class="tab-menu-item" data-project="project-6">
+                Data Structures and Algorithms
+              </button>
+              <div class="line"></div>
+            </div>
+            <div class="tab-content-wrapper">
+              <div id="project-1" class="project-content active">
+                <p>
+                  A fitness application that allows users to browse exercises,
+                  create customized workout plans, track their progress, and
+                  communicate with other users. The application utilizes a
+                  client-server architecture, with a User Module that provides a
+                  user-friendly interface for accessing the FitHub server's data
+                  tables.
+                </p>
+                <p>PLs used: HTML, CSS, TypeScript</p>
+                <div class="logo-wrapper-project">
+                  <img
+                    src="images/FithubApp.png"
+                    alt="Screenshot of the FitHub application"
+                  />
+                </div>
+              </div>
+              <div id="project-2" class="project-content">
+                <p>
+                  A virtual reality horror game set in space. The player takes
+                  on the role of a character navigating through a dangerous
+                  space environment, where they can encounter various obstacles
+                  and enemies that can cause damage to their character.
+                </p>
+                <p>PL used: C#</p>
+                <div class="logo-wrapper-project">
+                  <img
+                    src="images/OutbreakVR.png"
+                    alt="Screenshot of Outbreak"
+                  />
+                </div>
+              </div>
+              <div id="project-3" class="project-content">
+                <p>
+                  An embedded system utilizing a Nucleo board that uses push
+                  buttons to select a Christmas song. When a song plays, three
+                  LEDs flash to the notes of the song, displays the name of the
+                  song on an LCD screen and when the song is playing a
+                  potentiometer is used for volume control.
+                </p>
+                <p>PL used: C++</p>
+                <div class="logo-wrapper-project">
+                  <img
+                    src="images/MusicLightDisplay.png"
+                    alt="Screenshot of Musical Light Display"
+                  />
+                </div>
+              </div>
+              <div id="project-4" class="project-content">
+                <p>
+                  Developed a translator that utilizes a deterministic finite
+                  automaton (DFA) to adhere to a specific set of rules. Using
+                  provided files containing various sentences, the program
+                  checks for syntactic and semantic accuracy. If the sentences
+                  pass this check, the program accurately parses and translates
+                  the story from Japanese to English.
+                </p>
+                <p>PL used: C++</p>
+                <div class="logo-wrapper-project">
+                  <img src="images/Translator.png" alt="Screenshot of DFA" />
+                </div>
+              </div>
+              <div id="project-5" class="project-content">
+                <p>
+                  Created a GUI application using Tkinter that implemented a
+                  lexical analyzer by taking the input of source code, reading
+                  it line by line, getting the lexical analyzed result, and then
+                  parsing it into a parse tree.
+                </p>
+                <p>PL used: Python</p>
+                <div class="logo-wrapper-project">
+                  <img
+                    src="images/LexGUI.png"
+                    alt="Screenshot of Lexical Analyzer GUI"
+                  />
+                </div>
+              </div>
+              <div id="project-6" class="project-content">
+                <p>
+                  Assignments from CS 311 Data Structures & Algorithms class at
+                  CSUSM.
+                </p>
+                <p>PL used: C++</p>
+                <div class="logo-wrapper-project">
+                  <img
+                    src="images/DataStuctures.png"
+                    alt="Screenshot of Data Structures"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------- Contact  -------------------->
+      <div id="contact">
+        <div class="content-wrapper-contact">
+          <h2 data-number="04" class="section-header-contact">What's next?</h2>
+          <div class="contact-overlay">
+            <h3>Get In Touch</h3>
+            <p>
+              I am open to new opportunities and collaborations. Whether you
+              have a project in mind or just want to say hi, feel free to reach
+              out to me. I am always happy to connect and explore new
+              possibilities!
+            </p>
+            <button class="email-button">
+              <a href="mailto:contact@swanksoftware.com">Say Hello</a>
             </button>
-
-            <div class="nav-links-wrapper">
-                <div class="nav-link-wrapper">
-                    <a href="#education" class="nav-link" data-number="01" onclick="toggleMenu()">Education</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#work-experience" class="nav-link" data-number="02" onclick="toggleMenu()">Experience</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#projects" class="nav-link" data-number="03" onclick="toggleMenu()">Projects</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="#contact" class="nav-link" data-number="04" onclick="toggleMenu()">Contact</a>
-                </div>
-
-                <button class="resume-button" onclick="location.href='res/Resume.pdf'">Resume</button>
-            </div>
-        </nav>
-        <div id="page-content">
-            <!-------------------- Introduction  -------------------->
-            <section class="content-wrapper-intro">
-                <h1 class="text-color-intro">Hi, my name is</h1>
-                <h2 class="custom-line-height-intro"><span class="name-intro">Dakota Swank.</span></h2>
-                <h3 class="custom-line-height-intro"><span class="welcome-intro">Welcome to my portfolio.</span></h3>
-                <p class="paragraph-intro">I am a San Diego-based software engineer with a
-                    passion for creating innovative and user-friendly solutions. With a strong
-                    foundation in programming languages such as HTML, CSS, Javascript, C++ and Java, I
-                    strive to develop efficient and high-quality applications that cater to the
-                    diverse needs of clients across various industries.</p>
-
-                <a href="about.html"><button class="about-button-intro">Learn More About Me!</button></a>
-            </section>
-
-            <!-------------------- Academics  -------------------->
-            <section id="education">
-                <h2 class="section-header" data-number="01">Education</h2>
-                <div class="content-wrapper-academics">
-                    
-                    <article class="item-wrapper-academics">
-                        <div class="img-bkgrd-miracosta">
-                            <div class="logo-wrapper-academics">
-                                <img src="images/logos/miracostalogo.png" alt="Miracosta Logo">
-                            </div>
-                        </div>
-                        <div class="item-info-academics-associates">
-                            <div class="item-text-academics-miracosta">
-                                <div class="text-box">
-                                    <p>2019 - 2021</p>
-                                    <p>Associate Degree for Transfer: Computer Science</p>
-                                    <p>Honors: GPA: 3.76 | Phi Theta Kappa Honors Society</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="item-wrapper-academics">
-                        <div class="img-bkgrd-CSUSM">
-                            <div class="logo-wrapper-academics">
-                                <img src="images/logos/csusmlogo.png" alt="CSUSM Logo">
-                            </div>
-                        </div>
-                        <div class="item-info-academics-bachelors">
-                            <div class="item-text-academics-CSUSM">
-                                <div class="text-box">
-                                    <p>2022 - 2023</p>
-                                    <p>Bachelor of Science: Computer Science</p>
-                                    <p>Honors: GPA: 3.66 | Golden Key International Honor Society</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!------------------ Work Experience  ------------------>
-            <div id="work-experience">
-                <h2 class="section-header" data-number="02">Experience</h2>
-                <div class="content-wrapper-work">
-                    <article class="item-wrapper-work">
-                        <div class="img-bkgrd-work">
-                            <div class="overlay"></div>
-                            <div class="logo-wrapper-work">
-                                <img src="images/logos/boeinglogo.png" alt="Boeing Logo">
-                            </div>
-                        </div>
-                        <div class="item-info-work">
-                            <div class="subtitle-work">
-                                Software Application Tester
-                            </div>
-                            <p>Writes, executes and reports test cases performed for web-based applications and creates various
-                                regression testing scenarios to evaluate effectiveness, quality, and scalability performance
-                                of web-based tools used across the customer enterprise and across the broader Intelligence
-                                Community (IC).</p>
-                            <p>PLs used: Java, JavaScript, SQL </p>
-                            <p>Tools used: Jira, GitLab, Postman, SoapUI, SQL Developer, TortoiseSVN</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-------------------- Projects  -------------------->
-            <div id="projects">
-                <h2 data-number="03" class="section-header">Projects</h2>
-                <div class="content-wrapper-projects">
-                    <div class="tabs">
-                        <div class="tab-menu">
-                            <button class="tab-menu-item active" data-project="project-1">Fithub</button>
-                            <button class="tab-menu-item" data-project="project-2">Outbreak VR</button>
-                            <button class="tab-menu-item" data-project="project-3">Light Display</button>
-                            <button class="tab-menu-item" data-project="project-4">Japanese Translator</button>
-                            <button class="tab-menu-item" data-project="project-5">Lexical Analyzer GUI</button>
-                            <button class="tab-menu-item" data-project="project-6">Data Structures and Algorithms</button>
-                            <div class="line"></div>
-                        </div>
-                        <div class="tab-content-wrapper">
-                            <div id="project-1" class="project-content active">
-                                <p>A fitness application that allows users to browse exercises, create customized workout plans,
-                                    track their progress, and communicate with other users. The application utilizes a client-server
-                                    architecture, with a User Module that provides a user-friendly interface for accessing the FitHub
-                                    server's data tables.</p>
-                                <p>PLs used: HTML, CSS, TypeScript</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/FithubApp.png" alt="Screenshot of the FitHub application">
-                                </div>
-                            </div>
-                            <div id="project-2" class="project-content">
-                                <p>A virtual reality horror game set in space. The player takes on the role of a character
-                                    navigating through a dangerous space environment, where they can encounter
-                                    various obstacles and enemies that can cause damage to their character. </p>
-                                <p>PL used: C#</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/OutbreakVR.png" alt="Screenshot of Outbreak">
-                                </div>
-                            </div>
-                            <div id="project-3" class="project-content">
-                                <p>An embedded system utilizing a Nucleo board that uses push buttons to select
-                                    a Christmas song. When a song plays, three LEDs flash to the notes of the song, displays
-                                    the name of the song on an LCD screen and when the song is playing a potentiometer is used
-                                    for volume control.</p>
-                                <p>PL used: C++</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/MusicLightDisplay.png" alt="Screenshot of Musical Light Display">
-                                </div>
-                            </div>
-                            <div id="project-4" class="project-content">
-                                <p>Developed a translator that utilizes a deterministic finite automaton (DFA) to adhere to a
-                                    specific set of rules. Using provided files containing various sentences, the program checks
-                                    for syntactic and semantic accuracy. If the sentences pass this check, the program accurately
-                                    parses and translates the story from Japanese to English. </p>
-                                <p>PL used: C++</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/Translator.png" alt="Screenshot of DFA">
-                                </div>
-                            </div>
-                            <div id="project-5" class="project-content">
-                                <p>Created a GUI application using Tkinter that implemented a lexical analyzer by taking the input
-                                    of source code, reading it line by line, getting the lexical analyzed result, and then parsing
-                                    it into a parse tree. </p>
-                                <p>PL used: Python</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/LexGUI.png" alt="Screenshot of Lexical Analyzer GUI">
-                                </div>
-                            </div>
-                            <div id="project-6" class="project-content">
-                                <p>Assignments from CS 311 Data Structures & Algorithms class at CSUSM.</p>
-                                <p>PL used: C++</p>
-                                <div class="logo-wrapper-project">
-                                    <img src="images/DataStuctures.png" alt="Screenshot of Data Structures">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-------------------- Contact  -------------------->
-            <div id="contact">
-                <div class="content-wrapper-contact">
-                <h2 data-number="04" class="section-header-contact">What's next?</h2>
-                    <div class="contact-overlay">
-                        <h3>Get In Touch</h3>
-                        <p>I am open to new opportunities and collaborations. Whether you have a project in mind or just want 
-                            to say hi, feel free to reach out to me. I am always happy to connect and explore new possibilities!</p>
-                        <button class="email-button"><a href="mailto:contact@swanksoftware.com">Say Hello</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay-blur"></div>
+          </div>
         </div>
-    </body>
-    <footer>
-        <div class="social-links-footer-wrapper">
-            <div class="social-links-footer">
-                <a href="https://www.linkedin.com/in/d-swank/"><img src="images/logos/linkedinicon.png" alt="LinkedIn Icon"></a>
-                <a href="https://github.com/d-swank"><img src="images/logos/githubicon.png" alt="GitHub Icon"></a>
-            </div>
-        </div>
-        <a href="https://github.com/d-swank/d-swank.github.io">Designed and built by Dakota Swank</a>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+      <div class="overlay-blur"></div>
+    </div>
+  </body>
+  <footer>
+    <div class="social-links-footer-wrapper">
+      <div class="social-links-footer">
+        <a href="https://www.linkedin.com/in/d-swank/"
+          ><img src="images/logos/linkedinicon.png" alt="LinkedIn Icon"
+        /></a>
+        <a href="https://github.com/d-swank"
+          ><img src="images/logos/githubicon.png" alt="GitHub Icon"
+        /></a>
+      </div>
+    </div>
+    <a href="https://github.com/d-swank/d-swank.github.io"
+      >Designed and built by Dakota Swank</a
+    >
+  </footer>
+  <script src="script.js"></script>
 </html>
