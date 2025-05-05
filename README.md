@@ -11,7 +11,7 @@ This was my first personal portfolio website, built using only HTML, CSS, and Ja
 
 ## 🔗 Live Website
 
-🌐 [Your GitHub Pages Link](https://d-swank.github.io/my-portfolio-v1)
+🌐 [d-swank.github.io](https://d-swank.github.io/my-portfolio-v1)
 
 ---
 
